@@ -44,7 +44,7 @@
      ```
 
 ### 7. **Jupyter Notebook**
-   - Alat interaktif untuk eksplorasi data, penulisan catatan, dan visualisasi langsung.
+   - Alat interaktif untuk eksplorasi data, penulisan catatan, dan visualisasi langsung.[1]
 
 ## Guided 1
 
@@ -93,7 +93,7 @@ Penjelasan :
 
 - Menghitung dan Menampilkan Hasil 
 
-Program menghitung kuadrat dari angka yang dimasukkan menggunakan fungsi lambda dan kemudian menampilkan hasilnya.
+Program menghitung kuadrat dari angka yang dimasukkan menggunakan fungsi lambda dan kemudian menampilkan hasilnya.[3]
 
 ## Hasil output
 ```Python
@@ -1450,3 +1450,14 @@ Penjelasan :
 
 Dalam output tersebut, pengguna pertama kali memasukkan daftar angka genap `2 4 6 8 10`, yang diproses dan disimpan dalam list. Setelah itu, pengguna mencari angka `4`. Program kemudian menggunakan fungsi `binary_search_even` untuk mencari angka tersebut dalam list. Hasilnya menunjukkan bahwa angka `4` ditemukan di indeks `1`, yang berarti angka tersebut berada di posisi kedua dalam list (karena indeks dimulai dari 0). Ini mengindikasikan bahwa pencarian biner berfungsi dengan baik untuk menemukan angka dalam daftar yang telah diurutkan.
 
+## Kesimpulan
+
+Python merupakan bahasa pemrograman yang penting dalam sains data, menawarkan kemudahan penggunaan dan pustaka yang kuat[2]. Dalam memahami Python, penting untuk mengenal variabel dan tipe data dasar seperti `int`, `float`, `str`, dan `bool` yang digunakan untuk menyimpan informasi. Struktur data, termasuk `list`, `dictionary`, `tuple`, dan `set`, membantu dalam pengelompokan data. Kontrol alur menggunakan `if-else` dan looping seperti `for` dan `while` memungkinkan pengambilan keputusan dan iterasi. Fungsi di Python memungkinkan modularisasi kode, sehingga lebih terstruktur dan mudah dibaca. Pustaka-pustaka seperti NumPy, Pandas, dan Matplotlib mendukung komputasi numerik, analisis data, dan visualisasi[5]. Selain itu, kemampuan untuk membaca dan menulis data menggunakan Pandas, termasuk file CSV, sangat berguna. Jupyter Notebook menjadi alat interaktif yang ideal untuk eksplorasi, analisis, dan visualisasi data secara real-time. Dengan memahami konsep-konsep ini, individu dapat membangun fondasi yang kuat dalam sains data[4].
+
+## Referensi
+
+[1] Karimah Tauhid, Volume 2 Nomor 1 (2023), e-ISSN 2963-590X | Alfarizi et al.
+[2] Romzi1, M. (2020). PEMBELAJARAN PEMROGRAMAN PYTHON DENGAN PENDEKATAN LOGIKA ALGORITMA. 37-44.
+[3] Raihan Muhammad1*, S. Y. (2023). PENERAPAN PEMROGRAMAN PYTHON DALAM MENENTUKAN WAKTU OVERHOUL KONDENSOR TURBIN UAP. 49-57.
+[4] Trie Maya Kadarina, M. H. (2019). PENGENALAN BAHASA PEMROGRAMAN PYTHON MENGGUNAKAN APLIKASI GAMES UNTUK SISWA/I DI WILAYAH KEMBANGAN UTARA. 11-16.
+[5] Wilyani, F. (2024). Pengenalan Dasar Pemrograman Python Dengan Google Colaboratory . 08-14
