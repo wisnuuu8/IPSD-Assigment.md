@@ -406,3 +406,930 @@ Fungsi `generate_pattern(rows)` menghasilkan pola bilangan prima dalam format se
 ```
 Penjelasan :
 
+Output menampilkan pola segitiga yang diisi dengan bilangan prima, sesuai dengan jumlah baris yang diminta. Ini menunjukkan bagaimana fungsi bekerja secara terintegrasi untuk menghasilkan dan menampilkan bilangan prima dalam format yang teratur dan mudah dibaca.
+
+## Unguided 2
+
+### 2. [Membuat Fungsi dengan Syarat Spesifik]
+**Soal**: Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
+
+```Python
+def combine_and_sort_odd_indices(list1, list2):
+    """Menggabungkan elemen dari dua list yang memiliki indeks ganjil dan mengurutkannya secara menurun."""
+    # Mengambil elemen dengan indeks ganjil dari kedua list
+    odd_indexed_elements = []
+    
+    # Menambahkan elemen dengan indeks ganjil dari list1
+    odd_indexed_elements.extend(list1[i] for i in range(1, len(list1), 2))
+    
+    # Menambahkan elemen dengan indeks ganjil dari list2
+    odd_indexed_elements.extend(list2[i] for i in range(1, len(list2), 2))
+    
+    # Mengurutkan elemen secara menurun
+    odd_indexed_elements.sort(reverse=True)
+    
+    return odd_indexed_elements
+
+# Contoh penggunaan
+list1 = [10, 20, 30, 40, 50]
+list2 = [5, 15, 25, 35, 45]
+result = combine_and_sort_odd_indices(list1, list2)
+print(result) 
+```
+```Python
+def combine_and_sort_odd_indices(list1, list2):
+    """Menggabungkan elemen dari dua list yang memiliki indeks ganjil dan mengurutkannya secara menurun."""
+    # Mengambil elemen dengan indeks ganjil dari kedua list
+    odd_indexed_elements = []
+    
+    # Menambahkan elemen dengan indeks ganjil dari list1
+    odd_indexed_elements.extend(list1[i] for i in range(1, len(list1), 2))
+    
+    # Menambahkan elemen dengan indeks ganjil dari list2
+    odd_indexed_elements.extend(list2[i] for i in range(1, len(list2), 2))
+    
+    # Mengurutkan elemen secara menurun
+    odd_indexed_elements.sort(reverse=True)
+    
+    return odd_indexed_elements
+```
+Penjelassan :
+
+Fungsi `combine_and_sort_odd_indices(list1, list2)` menggabungkan elemen-elemen dari dua list yang memiliki indeks ganjil dan mengurutkannya secara menurun. Pertama, fungsi mengumpulkan elemen dari `list1` dan `list2` yang terletak pada indeks ganjil ke dalam daftar `odd_indexed_elements`. Setelah semua elemen terkumpul, fungsi kemudian mengurutkannya dalam urutan menurun menggunakan metode `sort()`. Terakhir, fungsi mengembalikan daftar yang sudah digabungkan dan diurutkan.
+
+## Hasil output 
+```Python
+[40, 35, 20, 15]
+```
+
+## Unguided 3
+
+### 3. [Exception Handling dalam Konteks Nyata]
+**Soal**: Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus:
+```Python
+def atm_simulation():
+    # PIN dan saldo awal
+    correct_pin = "1234"
+    balance = 10000  # Saldo awal
+    attempts = 3
+
+    # Meminta pengguna untuk memasukkan PIN
+    while attempts > 0:
+        pin = input("Masukkan PIN Anda: ")
+        if pin == correct_pin:
+            print("PIN benar.")
+            break
+        else:
+            attempts -= 1
+            print(f"PIN salah. Sisa percobaan: {attempts}")
+
+    if attempts == 0:
+        print("Akses ditolak. Terlalu banyak percobaan.")
+        return
+
+    # Meminta jumlah penarikan
+    try:
+        amount = float(input("Masukkan jumlah yang ingin ditarik: "))
+        
+        if amount <= 0:
+            raise ValueError("Jumlah penarikan harus lebih dari 0.")
+        
+        if amount > balance:
+            raise ValueError("Saldo tidak cukup untuk penarikan ini.")
+
+        # Melakukan penarikan
+        balance -= amount
+        print(f"Penarikan berhasil. Saldo akhir Anda adalah: {balance}")
+        
+    except ValueError as e:
+        print(f"Kesalahan: {e}")
+
+atm_simulation()
+```
+```Python
+def atm_simulation():
+    # PIN dan saldo awal
+    correct_pin = "1234"
+    balance = 10000  # Saldo awal
+    attempts = 3
+
+    # Meminta pengguna untuk memasukkan PIN
+    while attempts > 0:
+        pin = input("Masukkan PIN Anda: ")
+        if pin == correct_pin:
+            print("PIN benar.")
+            break
+        else:
+            attempts -= 1
+            print(f"PIN salah. Sisa percobaan: {attempts}")
+
+    if attempts == 0:
+        print("Akses ditolak. Terlalu banyak percobaan.")
+        return
+```
+Penjelasan :
+
+Fungsi `atm_simulation()` mensimulasikan autentikasi PIN untuk akses mesin ATM. Pengguna diberikan tiga percobaan untuk memasukkan PIN yang benar, yaitu "1234". Jika PIN yang dimasukkan benar, fungsi mencetak "PIN benar." Jika salah, sisa percobaan akan berkurang dan ditampilkan. Setelah tiga percobaan yang gagal, program akan mencetak "Akses ditolak. Terlalu banyak percobaan." dan menghentikan proses. Fungsi ini dirancang untuk meningkatkan keamanan dengan membatasi percobaan autentikasi.
+
+```Python
+# Meminta jumlah penarikan
+    try:
+        amount = float(input("Masukkan jumlah yang ingin ditarik: "))
+        
+        if amount <= 0:
+            raise ValueError("Jumlah penarikan harus lebih dari 0.")
+        
+        if amount > balance:
+            raise ValueError("Saldo tidak cukup untuk penarikan ini.")
+
+        # Melakukan penarikan
+        balance -= amount
+        print(f"Penarikan berhasil. Saldo akhir Anda adalah: {balance}")
+        
+    except ValueError as e:
+        print(f"Kesalahan: {e}")
+
+atm_simulation()
+```
+Penjelasan :
+
+Bagian kode ini menambahkan fungsi untuk meminta pengguna memasukkan jumlah uang yang ingin ditarik setelah PIN berhasil diverifikasi. Pengguna diminta untuk memasukkan jumlah penarikan, dan kode melakukan validasi input dengan menggunakan blok `try` dan `except` untuk menangani kesalahan. Jika jumlah penarikan kurang dari atau sama dengan nol, atau jika saldo tidak cukup, akan muncul pesan kesalahan. Jika input valid, jumlah penarikan akan dikurangkan dari saldo dan saldo akhir ditampilkan. Dengan demikian, kode ini menyelesaikan simulasi penarikan uang dari mesin ATM.
+
+## Hasil output
+```Python
+Masukkan PIN Anda:  3
+PIN salah. Sisa percobaan: 2
+Masukkan PIN Anda:  1234
+PIN benar.
+Masukkan jumlah yang ingin ditarik:  1000
+Penarikan berhasil. Saldo akhir Anda adalah: 9000.0
+```
+Penjelasan :
+
+Output menunjukkan langkah-langkah interaksi pengguna dengan mesin ATM. Pertama, pengguna memasukkan PIN "3" yang salah, dan program memberi tahu bahwa PIN salah dengan sisa percobaan 2. Selanjutnya, pengguna memasukkan PIN yang benar, "1234", dan berhasil diverifikasi. Setelah itu, pengguna diminta untuk memasukkan jumlah penarikan, yaitu 1000. Program berhasil memproses penarikan dan menampilkan saldo akhir sebagai 9000. Output mencerminkan proses autentikasi dan penarikan uang yang berhasil.
+
+## Unguided 4
+
+### 4. [Studi Kasus Pengelolaan Data]
+**Soal**: Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis sebuah program yang:
+
+```Python
+import csv
+
+def baca_data_csv(nama_file):
+    # Membaca file CSV dan menyimpan data ke dalam dictionary
+    data_mahasiswa = {}
+    
+    with open(nama_file, newline='') as file_csv:
+        reader = csv.reader(file_csv)
+        # Mengabaikan header jika ada
+        next(reader)  
+        for row in reader:
+            nama = row[0]
+            # Mengubah nilai menjadi float dan menyimpannya sebagai list
+            nilai = list(map(float, row[1:]))
+            data_mahasiswa[nama] = nilai
+    
+    return data_mahasiswa
+
+def hitung_rata_rata(data_mahasiswa):
+    # Menghitung rata-rata nilai tiap mahasiswa
+    rata_rata_mahasiswa = {}
+    for nama, nilai in data_mahasiswa.items():
+        rata_rata = sum(nilai) / len(nilai)
+        rata_rata_mahasiswa[nama] = rata_rata
+    
+    return rata_rata_mahasiswa
+
+def cari_mahasiswa_terbaik_terburuk(rata_rata_mahasiswa):
+    # Mencari mahasiswa dengan nilai tertinggi dan terendah
+    mahasiswa_terbaik = max(rata_rata_mahasiswa, key=rata_rata_mahasiswa.get)
+    mahasiswa_terburuk = min(rata_rata_mahasiswa, key=rata_rata_mahasiswa.get)
+    
+    return mahasiswa_terbaik, mahasiswa_terburuk
+
+nama_file = 'siswa_nilai (1).csv'
+
+data_mahasiswa = baca_data_csv(nama_file)
+
+rata_rata_mahasiswa = hitung_rata_rata(data_mahasiswa)
+
+mahasiswa_terbaik, mahasiswa_terburuk = cari_mahasiswa_terbaik_terburuk(rata_rata_mahasiswa)
+
+print("Rata-rata nilai tiap mahasiswa:")
+for nama, rata_rata in rata_rata_mahasiswa.items():
+    print(f"{nama}: {rata_rata:.2f}")
+
+print(f"\nMahasiswa dengan nilai tertinggi: {mahasiswa_terbaik} dengan rata-rata {rata_rata_mahasiswa[mahasiswa_terbaik]:.2f}")
+print(f"Mahasiswa dengan nilai terendah: {mahasiswa_terburuk} dengan rata-rata {rata_rata_mahasiswa[mahasiswa_terburuk]:.2f}")
+```
+```Python
+import csv
+
+def baca_data_csv(nama_file):
+    # Membaca file CSV dan menyimpan data ke dalam dictionary
+    data_mahasiswa = {}
+    
+    with open(nama_file, newline='') as file_csv:
+        reader = csv.reader(file_csv)
+        # Mengabaikan header jika ada
+        next(reader)  
+        for row in reader:
+            nama = row[0]
+            # Mengubah nilai menjadi float dan menyimpannya sebagai list
+            nilai = list(map(float, row[1:]))
+            data_mahasiswa[nama] = nilai
+    
+    return data_mahasiswa
+```
+Penjelasan :
+
+Fungsi `baca_data_csv` digunakan untuk membaca data dari file CSV dan menyimpannya dalam bentuk dictionary. Parameter `nama_file` adalah nama file CSV yang akan dibaca. Fungsi ini membuka file, mengabaikan header (jika ada), dan kemudian mengiterasi setiap baris untuk mengambil nama mahasiswa dan nilai-nilainya. Nilai-nilai tersebut diubah menjadi float dan disimpan dalam bentuk list, yang kemudian dipetakan ke nama mahasiswa dalam dictionary `data_mahasiswa`. Akhirnya, fungsi mengembalikan dictionary yang berisi nama mahasiswa sebagai kunci dan list nilai sebagai nilai.
+
+```Python
+def hitung_rata_rata(data_mahasiswa):
+    # Menghitung rata-rata nilai tiap mahasiswa
+    rata_rata_mahasiswa = {}
+    for nama, nilai in data_mahasiswa.items():
+        rata_rata = sum(nilai) / len(nilai)
+        rata_rata_mahasiswa[nama] = rata_rata
+    
+    return rata_rata_mahasiswa
+
+def cari_mahasiswa_terbaik_terburuk(rata_rata_mahasiswa):
+    # Mencari mahasiswa dengan nilai tertinggi dan terendah
+    mahasiswa_terbaik = max(rata_rata_mahasiswa, key=rata_rata_mahasiswa.get)
+    mahasiswa_terburuk = min(rata_rata_mahasiswa, key=rata_rata_mahasiswa.get)
+    
+    return mahasiswa_terbaik, mahasiswa_terburuk
+```
+Penjelasan :
+
+Fungsi `hitung_rata_rata` digunakan untuk menghitung rata-rata nilai dari setiap mahasiswa yang terdapat dalam dictionary `data_mahasiswa`. Fungsi ini membuat dictionary baru bernama `rata_rata_mahasiswa`, di mana setiap nama mahasiswa menjadi kunci, dan nilai rata-ratanya (hasil dari jumlah nilai dibagi jumlah nilai) menjadi nilai. Setelah semua rata-rata dihitung, fungsi mengembalikan dictionary tersebut.
+
+Fungsi `cari_mahasiswa_terbaik_terburuk` digunakan untuk menentukan mahasiswa dengan nilai tertinggi dan terendah berdasarkan rata-rata nilai yang dihitung sebelumnya. Fungsi ini menggunakan fungsi `max` untuk mencari mahasiswa dengan rata-rata tertinggi dan `min` untuk yang terendah. Keduanya dilakukan dengan menggunakan parameter `key` yang mengacu pada nilai dari dictionary `rata_rata_mahasiswa`. Fungsi ini mengembalikan nama mahasiswa terbaik dan terburuk.
+
+```Python
+nama_file = 'siswa_nilai (1).csv'
+
+data_mahasiswa = baca_data_csv(nama_file)
+
+rata_rata_mahasiswa = hitung_rata_rata(data_mahasiswa)
+
+mahasiswa_terbaik, mahasiswa_terburuk = cari_mahasiswa_terbaik_terburuk(rata_rata_mahasiswa)
+
+print("Rata-rata nilai tiap mahasiswa:")
+for nama, rata_rata in rata_rata_mahasiswa.items():
+    print(f"{nama}: {rata_rata:.2f}")
+
+print(f"\nMahasiswa dengan nilai tertinggi: {mahasiswa_terbaik} dengan rata-rata {rata_rata_mahasiswa[mahasiswa_terbaik]:.2f}")
+print(f"Mahasiswa dengan nilai terendah: {mahasiswa_terburuk} dengan rata-rata {rata_rata_mahasiswa[mahasiswa_terburuk]:.2f}")
+```
+Penjelasan :
+
+Kode ini berfungsi untuk membaca data mahasiswa dari file CSV dan melakukan analisis performa akademis mereka. Pertama, fungsi `baca_data_csv` digunakan untuk mengimpor data ke dalam dictionary bernama `data_mahasiswa`. Selanjutnya, fungsi `hitung_rata_rata` menghitung rata-rata nilai untuk setiap mahasiswa dan menyimpannya dalam dictionary `rata_rata_mahasiswa`. Kemudian, fungsi `cari_mahasiswa_terbaik_terburuk` digunakan untuk menentukan mahasiswa dengan rata-rata nilai tertinggi dan terendah. Terakhir, program menampilkan rata-rata nilai tiap mahasiswa serta nama mahasiswa yang memiliki nilai tertinggi dan terendah, memberikan gambaran ringkas tentang kinerja akademis mereka.
+
+## Hasil output
+```Python
+Rata-rata nilai tiap mahasiswa:
+Siswa_1: 59.00
+Siswa_2: 79.00
+Siswa_3: 61.00
+Siswa_4: 74.00
+Siswa_5: 50.00
+Siswa_6: 70.00
+Siswa_7: 100.00
+Siswa_8: 84.00
+Siswa_9: 78.00
+Siswa_10: 61.00
+Siswa_11: 92.00
+Siswa_12: 60.00
+Siswa_13: 78.00
+Siswa_14: 87.00
+Siswa_15: 57.00
+Siswa_16: 73.00
+Siswa_17: 53.00
+Siswa_18: 54.00
+Siswa_19: 97.00
+Siswa_20: 52.00
+Siswa_21: 84.00
+Siswa_22: 89.00
+Siswa_23: 52.00
+Siswa_24: 90.00
+Siswa_25: 52.00
+Siswa_26: 64.00
+Siswa_27: 96.00
+Siswa_28: 100.00
+Siswa_29: 84.00
+Siswa_30: 60.00
+Siswa_31: 85.00
+Siswa_32: 63.00
+Siswa_33: 64.00
+Siswa_34: 68.00
+Siswa_35: 67.00
+Siswa_36: 52.00
+Siswa_37: 79.00
+Siswa_38: 55.00
+Siswa_39: 88.00
+Siswa_40: 95.00
+Siswa_41: 78.00
+Siswa_42: 66.00
+Siswa_43: 71.00
+Siswa_44: 64.00
+Siswa_45: 51.00
+Siswa_46: 77.00
+Siswa_47: 90.00
+Siswa_48: 83.00
+Siswa_49: 99.00
+Siswa_50: 56.00
+Siswa_51: 68.00
+Siswa_52: 88.00
+Siswa_53: 62.00
+Siswa_54: 98.00
+Siswa_55: 58.00
+Siswa_56: 92.00
+Siswa_57: 60.00
+Siswa_58: 55.00
+Siswa_59: 93.00
+Siswa_60: 60.00
+Siswa_61: 53.00
+Siswa_62: 79.00
+Siswa_63: 75.00
+Siswa_64: 83.00
+Siswa_65: 58.00
+Siswa_66: 50.00
+Siswa_67: 75.00
+Siswa_68: 61.00
+Siswa_69: 57.00
+Siswa_70: 98.00
+Siswa_71: 85.00
+Siswa_72: 57.00
+Siswa_73: 53.00
+Siswa_74: 55.00
+Siswa_75: 54.00
+Siswa_76: 64.00
+Siswa_77: 51.00
+Siswa_78: 65.00
+Siswa_79: 68.00
+Siswa_80: 51.00
+Siswa_81: 99.00
+Siswa_82: 89.00
+Siswa_83: 92.00
+Siswa_84: 56.00
+Siswa_85: 96.00
+Siswa_86: 79.00
+Siswa_87: 76.00
+Siswa_88: 71.00
+Siswa_89: 98.00
+Siswa_90: 89.00
+Siswa_91: 92.00
+Siswa_92: 65.00
+Siswa_93: 50.00
+Siswa_94: 84.00
+Siswa_95: 67.00
+Siswa_96: 59.00
+Siswa_97: 57.00
+Siswa_98: 70.00
+Siswa_99: 66.00
+Siswa_100: 78.00
+
+Mahasiswa dengan nilai tertinggi: Siswa_7 dengan rata-rata 100.00
+Mahasiswa dengan nilai terendah: Siswa_5 dengan rata-rata 50.00
+```
+Penjelasan :
+
+Output ini menunjukkan rata-rata nilai untuk setiap mahasiswa yang terdaftar dalam dataset. Untuk setiap siswa, terdapat rata-rata nilai yang dihitung dari nilai-nilai yang mereka peroleh. Dari daftar tersebut, tampak bahwa **Siswa_7** memiliki rata-rata nilai tertinggi yaitu **100.00**, yang menunjukkan bahwa siswa tersebut berhasil mendapatkan nilai sempurna. Sebaliknya, **Siswa_5** memiliki rata-rata nilai terendah yaitu **50.00**, menandakan bahwa siswa ini berada di bawah standar yang diharapkan dalam hal nilai. Analisis ini memberikan gambaran umum tentang kinerja akademis mahasiswa yang dapat digunakan untuk evaluasi lebih lanjut.
+
+## Unguided 5
+
+### 5. [Kombinasi Logika dan Kreativitas]
+**Soal**: Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebih kecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah.
+
+```Python
+import random
+
+def tebak_angka():
+    angka_rahasia = random.randint(1, 100)
+    percobaan = 5
+    
+    print("Selamat datang di permainan Tebak Angka!")
+    print("Saya telah memilih sebuah angka antara 1 hingga 100.")
+    print(f"Anda memiliki {percobaan} percobaan untuk menebaknya.")
+
+    # Loop untuk percobaan menebak
+    for i in range(percobaan):
+        try:
+            tebakan = int(input(f"Tebakan ke-{i + 1}: "))
+            
+            if tebakan < 1 or tebakan > 100:
+                print("Tebakan harus antara 1 hingga 100. Coba lagi.")
+                continue
+
+            if tebakan < angka_rahasia:
+                print("Tebakan Anda terlalu kecil.")
+            elif tebakan > angka_rahasia:
+                print("Tebakan Anda terlalu besar.")
+            else:
+                print(f"Selamat! Anda menebak angka yang benar: {angka_rahasia}!")
+                break
+        except ValueError:
+            print("Input tidak valid. Silakan masukkan angka.")
+
+    else:  # Jika loop selesai tanpa break, artinya pemain kalah
+        print(f"Anda kehabisan percobaan. Angka yang benar adalah: {angka_rahasia}.")
+        
+# Menjalankan permainan
+if __name__ == "__main__":
+    tebak_angka()
+```
+Penjelasan :
+
+Program "Tebak Angka" adalah permainan di mana pemain menebak angka rahasia antara 1 hingga 100. Program memilih angka secara acak dan memberikan pemain 5 percobaan untuk menebak. Setiap tebakan diperiksa; jika tebakan terlalu kecil atau besar, pemain mendapatkan umpan balik. Program juga menangani kesalahan input non-angka. Jika pemain menebak dengan benar, mereka menang, tetapi jika kehabisan percobaan, angka rahasia diungkapkan. Program ini mengilustrasikan pengendalian alur, penanganan kesalahan, dan interaksi pengguna dalam Python.
+
+## Hasil output 
+```Python
+Selamat datang di permainan Tebak Angka!
+Saya telah memilih sebuah angka antara 1 hingga 100.
+Anda memiliki 5 percobaan untuk menebaknya.
+Tebakan ke-1:  2
+Tebakan Anda terlalu kecil.
+Tebakan ke-2:  70
+Tebakan Anda terlalu besar.
+Tebakan ke-3:  53
+Tebakan Anda terlalu besar.
+Tebakan ke-4:  12
+Tebakan Anda terlalu kecil.
+Tebakan ke-5:  43
+Tebakan Anda terlalu besar.
+Anda kehabisan percobaan. Angka yang benar adalah: 41.
+```
+Penjelasan :
+
+Pemain mencoba menebak angka rahasia antara 1 hingga 100 dengan total 5 percobaan. 
+
+- Pada percobaan pertama, tebakan **2** terlalu kecil. 
+- Kedua, **70** terlalu besar. 
+- Ketiga, **53** juga terlalu besar. 
+- Keempat, **12** masih terlalu kecil. 
+- Kelima, **43** terlalu besar.
+
+Setelah 5 percobaan, pemain tidak berhasil menebak angka rahasia, yaitu **41**, dan program menginformasikan bahwa mereka telah kehabisan percobaan.
+
+## Unguided 6
+
+### 6. [Rekursi yang Tidak Biasa]
+**Soal**: Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
+
+```Python
+def faktorial(n):
+    """Fungsi rekursif untuk menghitung faktorial dari n."""
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * faktorial(n - 1)
+
+def urutan_faktorial(n):
+    """Fungsi untuk menghasilkan urutan faktorial dari 1 hingga n."""
+    if n < 1:
+        return []
+    else:
+        # Memanggil urutan_faktorial untuk n-1 dan menambahkan faktorial n
+        return urutan_faktorial(n - 1) + [faktorial(n)]
+
+# Contoh penggunaan
+n = 4
+output = urutan_faktorial(n)
+print(output)  # Output: [1, 1, 2, 6, 24]
+```
+Penjelasan :
+
+Program di atas terdiri dari dua fungsi: 
+
+1. **`faktorial(n)`**: Menghitung faktorial dari bilangan bulat non-negatif `n` secara rekursif. Jika `n` adalah 0 atau 1, fungsi mengembalikan 1; jika tidak, fungsi mengalikan `n` dengan faktorial dari `n - 1`.
+
+2. **`urutan_faktorial(n)`**: Menghasilkan daftar yang berisi faktorial dari 1 hingga `n`. Jika `n` kurang dari 1, mengembalikan daftar kosong; jika tidak, memanggil dirinya sendiri untuk `n - 1` dan menambahkan faktorial dari `n` ke hasilnya.
+
+Pada contoh penggunaan dengan `n = 4`, outputnya adalah `[1, 2, 6, 24]`, yang merupakan faktorial dari 1, 2, 3, dan 4.
+
+## Hasil output 
+```Python
+[1, 2, 6, 24]
+```
+Penjelasan :
+
+Output `[1, 2, 6, 24]` menunjukkan urutan faktorial dari angka 1 hingga 4, dihasilkan oleh fungsi `urutan_faktorial`. Rincian dari output ini adalah:
+
+- **1! = 1**
+- **2! = 2**
+- **3! = 6**
+- **4! = 24**
+
+Masing-masing elemen dalam daftar adalah hasil dari menghitung faktorial untuk setiap bilangan bulat dari 1 hingga 4.
+
+## Unguided 7
+
+### 7. [ Pemrograman dengan Algoritma Greedy]
+**Soal**: Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
+
+```Python
+def min_coin_change(amount, coins):
+    """Menghitung kombinasi minimum koin yang diperlukan untuk mencapai jumlah tertentu."""
+    # Mengurutkan koin dari yang terbesar ke yang terkecil
+    coins.sort(reverse=True)
+    
+    # Menyimpan jumlah koin yang digunakan
+    coin_count = {}
+    
+    for coin in coins:
+        if amount == 0:
+            break
+        
+        # Menghitung jumlah koin yang bisa digunakan
+        count = amount // coin
+        if count > 0:
+            coin_count[coin] = count
+            amount -= coin * count
+            
+    if amount > 0:
+        print("Tidak mungkin mencapai jumlah uang tersebut dengan koin yang tersedia.")
+    else:
+        print("Kombinasi koin yang diperlukan:")
+        for coin, count in coin_count.items():
+            print(f"Koin {coin}: {count} buah")
+
+def main():
+    # Meminta input jumlah uang dan daftar koin
+    try:
+        amount = int(input("Masukkan jumlah uang yang ingin dicapai: "))
+        coins_input = input("Masukkan nilai koin yang tersedia (pisahkan dengan spasi): ")
+        coins = list(map(int, coins_input.split()))
+
+        if amount < 0:
+            print("Jumlah uang tidak boleh negatif.")
+            return
+        
+        if not coins:
+            print("Daftar koin tidak boleh kosong.")
+            return
+
+        min_coin_change(amount, coins)
+    
+    except ValueError:
+        print("Input tidak valid. Pastikan Anda memasukkan angka untuk jumlah uang dan nilai koin.")
+
+# Menjalankan program
+if __name__ == "__main__":
+    main()
+```
+```Python
+def min_coin_change(amount, coins):
+    """Menghitung kombinasi minimum koin yang diperlukan untuk mencapai jumlah tertentu."""
+    # Mengurutkan koin dari yang terbesar ke yang terkecil
+    coins.sort(reverse=True)
+    
+    # Menyimpan jumlah koin yang digunakan
+    coin_count = {}
+    
+    for coin in coins:
+        if amount == 0:
+            break
+        
+        # Menghitung jumlah koin yang bisa digunakan
+        count = amount // coin
+        if count > 0:
+            coin_count[coin] = count
+            amount -= coin * count
+            
+    if amount > 0:
+        print("Tidak mungkin mencapai jumlah uang tersebut dengan koin yang tersedia.")
+    else:
+        print("Kombinasi koin yang diperlukan:")
+        for coin, count in coin_count.items()
+```
+Penjelasan :
+
+Fungsi `min_coin_change` menghitung kombinasi minimum koin yang diperlukan untuk mencapai jumlah tertentu (amount) menggunakan daftar koin yang diberikan. Fungsi ini bekerja dengan langkah-langkah berikut:
+
+1. **Pengurutan Koin**: Koin diurutkan dari yang terbesar ke yang terkecil untuk memaksimalkan nilai koin yang digunakan dan mengurangi jumlah koin yang diperlukan.
+
+2. **Inisialisasi**: Sebuah dictionary `coin_count` digunakan untuk menyimpan jumlah setiap jenis koin yang digunakan.
+
+3. **Iterasi Koin**: Untuk setiap koin, jika jumlah yang tersisa (`amount`) tidak sama dengan nol, fungsi menghitung berapa banyak koin dari nilai tersebut yang dapat digunakan. Ini dilakukan dengan pembagian integer (`amount // coin`).
+
+4. **Pembaruan Jumlah**: Jika ada koin yang dapat digunakan, jumlah koin tersebut ditambahkan ke `coin_count`, dan `amount` diperbarui dengan mengurangkan nilai total koin yang digunakan.
+
+5. **Cek Sisa Jumlah**: Jika setelah proses semua koin jumlah yang tersisa masih lebih dari nol, maka dicetak pesan bahwa jumlah tersebut tidak dapat dicapai dengan koin yang tersedia. Jika tidak, kombinasi koin yang diperlukan dicetak.
+
+Fungsi ini efektif dalam memberikan solusi untuk masalah perubahan uang menggunakan metode greedy.
+
+```Python
+def main():
+    # Meminta input jumlah uang dan daftar koin
+    try:
+        amount = int(input("Masukkan jumlah uang yang ingin dicapai: "))
+        coins_input = input("Masukkan nilai koin yang tersedia (pisahkan dengan spasi): ")
+        coins = list(map(int, coins_input.split()))
+
+        if amount < 0:
+            print("Jumlah uang tidak boleh negatif.")
+            return
+        
+        if not coins:
+            print("Daftar koin tidak boleh kosong.")
+            return
+
+        min_coin_change(amount, coins)
+    
+    except ValueError:
+        print("Input tidak valid. Pastikan Anda memasukkan angka untuk jumlah uang dan nilai koin.")
+
+# Menjalankan program
+if __name__ == "__main__":
+    main()
+```
+Penjelaan :
+
+Fungsi `main()` bertanggung jawab untuk menjalankan program dan mengelola interaksi dengan pengguna. Berikut adalah penjelasan singkat mengenai fungsinya:
+
+1. **Input Pengguna**: Program meminta pengguna untuk memasukkan jumlah uang yang ingin dicapai dan daftar nilai koin yang tersedia. Nilai koin dimasukkan dalam bentuk string yang dipisahkan dengan spasi.
+
+2. **Validasi Input**:
+   - Program memeriksa apakah jumlah uang yang dimasukkan negatif. Jika iya, akan mencetak pesan bahwa jumlah uang tidak boleh negatif dan keluar dari fungsi.
+   - Program juga memeriksa apakah daftar koin kosong. Jika kosong, akan mencetak pesan bahwa daftar koin tidak boleh kosong dan keluar dari fungsi.
+
+3. **Menggunakan Fungsi `min_coin_change`**: Jika semua input valid, fungsi `min_coin_change()` dipanggil dengan argumen `amount` dan `coins` untuk menghitung kombinasi minimum koin yang diperlukan.
+
+4. **Penanganan Kesalahan**: Program menggunakan blok `try-except` untuk menangani kesalahan konversi input. Jika pengguna memasukkan nilai yang tidak valid (misalnya, huruf alih-alih angka), program akan mencetak pesan kesalahan yang sesuai.
+
+Dengan menggunakan struktur ini, program dapat memastikan bahwa pengguna memberikan input yang valid sebelum melakukan perhitungan, sehingga meningkatkan pengalaman pengguna dan mencegah kesalahan runtime.
+
+## Hasil output 
+```Python
+Masukkan jumlah uang yang ingin dicapai:  1000000
+Masukkan nilai koin yang tersedia (pisahkan dengan spasi):  10 000
+Kombinasi koin yang diperlukan:
+Koin 10: 100000 buah
+```
+Penjelasan :
+
+Output dari program menunjukkan hasil dari fungsi `min_coin_change()` setelah pengguna memasukkan jumlah uang yang ingin dicapai dan nilai koin yang tersedia. Berikut adalah penjelasan singkat:
+
+1. **Input**: Pengguna memasukkan `1000000` sebagai jumlah uang yang ingin dicapai dan koin dengan nilai `10` dan `000`. Namun, nilai koin `000` secara teknis dianggap sebagai `0`, tetapi saat diproses, koin `0` tidak mempengaruhi hasil.
+
+2. **Proses**: 
+   - Program mengurutkan koin dari yang terbesar ke terkecil, tetapi dalam kasus ini hanya `10` yang valid.
+   - Menggunakan koin `10`, program menghitung berapa banyak koin yang dibutuhkan untuk mencapai jumlah `1000000`. 
+   - Dengan melakukan perhitungan, didapatkan bahwa `100000` koin `10` dibutuhkan, karena \( 10 \times 100000 = 1000000 \).
+
+3. **Output**: Program mencetak bahwa diperlukan `100000` buah koin `10` untuk mencapai jumlah uang `1000000`. 
+
+Ini menunjukkan bahwa algoritme berhasil menghitung kombinasi minimum koin yang diperlukan berdasarkan input pengguna, meskipun koin `000` tidak memiliki efek dalam perhitungan.
+
+## Unguided 8
+
+### 8. [Kombinasi String dan Manipulasi List]
+**Soal**: Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. Misalnya
+
+```Python
+def reverse_words(input_string):
+    """Mengonversi string menjadi list berisi kata-kata yang terbalik."""
+    # Memecah string menjadi kata-kata
+    words = input_string.split()
+    
+    # Membalik setiap kata dan menyimpannya dalam list
+    reversed_words = [word[::-1] for word in words]
+    
+    return reversed_words
+
+def main():
+    # Meminta input dari pengguna
+    user_input = input("Masukkan string: ")
+    
+    # Mengonversi dan menampilkan hasil
+    result = reverse_words(user_input)
+    print(result)
+
+# Menjalankan program
+if __name__ == "__main__":
+    main()
+```
+```Python
+def reverse_words(input_string):
+    """Mengonversi string menjadi list berisi kata-kata yang terbalik."""
+    # Memecah string menjadi kata-kata
+    words = input_string.split()
+    
+    # Membalik setiap kata dan menyimpannya dalam list
+    reversed_words = [word[::-1] for word in words]
+    
+    return reversed_words
+```
+Penjelasan :
+
+Fungsi `reverse_words(input_string)` membalik setiap kata dalam string yang diberikan. Fungsi ini memecah string menjadi list kata-kata menggunakan metode `.split()`, kemudian membalik setiap kata dengan slicing `[::-1]`, dan akhirnya mengembalikan list yang berisi kata-kata yang telah dibalik. Contohnya, input `"Hello World"` akan menghasilkan output `['olleH', 'dlroW']`.
+
+```Python
+def main():
+    # Meminta input dari pengguna
+    user_input = input("Masukkan string: ")
+    
+    # Mengonversi dan menampilkan hasil
+    result = reverse_words(user_input)
+    print(result)
+
+# Menjalankan program
+if __name__ == "__main__":
+    main()
+```
+Penjelasan :
+
+Fungsi `main()` meminta input dari pengguna berupa string, kemudian menggunakan fungsi `reverse_words()` untuk membalik setiap kata dalam string tersebut. Setelah itu, hasilnya ditampilkan ke layar. Program ini berjalan dengan memeriksa apakah file dieksekusi sebagai program utama dan menjalankan fungsi `main()`. Misalnya, jika pengguna memasukkan string `"Halo Dunia"`, outputnya akan berupa `['olaH', 'ainuD']`.
+
+## Hasil output 
+```Python
+Masukkan string:  aku suka buah
+['uka', 'akus', 'haub']
+```
+Penjelasan :
+
+Output `['uka', 'akus', 'haub']` menunjukkan bahwa setiap kata dalam string yang dimasukkan, yaitu "aku suka buah", telah dibalik. 
+
+- Kata "aku" menjadi "uka".
+- Kata "suka" menjadi "akus".
+- Kata "buah" menjadi "haub".
+
+Dengan demikian, fungsi `reverse_words()` berhasil mengonversi dan membalik setiap kata dalam string yang diberikan oleh pengguna.
+
+## Unguided 9
+
+### 9. Konsep Class dan Object-Oriented Programming]
+**Soal**: Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku.
+
+```Python
+class Buku:
+    def __init__(self, judul, penulis, tahun_terbit):
+        """Inisialisasi atribut judul, penulis, dan tahun terbit."""
+        self.judul = judul
+        self.penulis = penulis
+        self.tahun_terbit = tahun_terbit
+
+    def tampilkan_informasi(self):
+        """Menampilkan informasi buku."""
+        print(f"Judul: {self.judul}")
+        print(f"Penulis: {self.penulis}")
+        print(f"Tahun Terbit: {self.tahun_terbit}")
+
+    def hitung_usia_buku(self, tahun_sekarang):
+        """Menghitung usia buku berdasarkan tahun saat ini."""
+        return tahun_sekarang - self.tahun_terbit
+
+def main():
+    # Tahun saat ini
+    tahun_sekarang = int(input("Masukkan tahun saat ini: "))
+
+    # Memasukkan informasi buku melalui input
+    jumlah_buku = int(input("Berapa buku yang ingin Anda masukkan? "))
+
+    buku_list = []
+    
+    for i in range(jumlah_buku):
+        print(f"\nMasukkan informasi buku ke-{i + 1}:")
+        judul = input("Masukkan judul buku: ")
+        penulis = input("Masukkan penulis buku: ")
+        tahun_terbit = int(input("Masukkan tahun terbit buku: "))
+        buku = Buku(judul, penulis, tahun_terbit)
+        buku_list.append(buku)
+
+    # Menampilkan informasi dan usia setiap buku
+    for buku in buku_list:
+        buku.tampilkan_informasi()
+        usia = buku.hitung_usia_buku(tahun_sekarang)
+        print(f"Usia Buku: {usia} tahun\n")
+
+# Menjalankan program
+if __name__ == "__main__":
+    main()
+```
+```Python
+class Buku:
+    def __init__(self, judul, penulis, tahun_terbit):
+        """Inisialisasi atribut judul, penulis, dan tahun terbit."""
+        self.judul = judul
+        self.penulis = penulis
+        self.tahun_terbit = tahun_terbit
+
+    def tampilkan_informasi(self):
+        """Menampilkan informasi buku."""
+        print(f"Judul: {self.judul}")
+        print(f"Penulis: {self.penulis}")
+        print(f"Tahun Terbit: {self.tahun_terbit}")
+
+    def hitung_usia_buku(self, tahun_sekarang):
+        """Menghitung usia buku berdasarkan tahun saat ini."""
+        return tahun_sekarang - self.tahun_terbit
+```
+Penjelasan :
+
+Kelas `Buku` adalah representasi objek buku yang memiliki atribut untuk menyimpan informasi seperti judul, penulis, dan tahun terbit. 
+
+1. **Inisialisasi**: Kelas ini menggunakan metode `__init__` untuk menginisialisasi tiga atribut: `judul`, `penulis`, dan `tahun_terbit`.
+
+2. **Menampilkan Informasi**: Metode `tampilkan_informasi` mencetak detail buku ke layar, termasuk judul, penulis, dan tahun terbit.
+
+3. **Menghitung Usia Buku**: Metode `hitung_usia_buku` menerima parameter `tahun_sekarang` dan mengembalikan selisih antara tahun saat ini dan tahun terbit buku, yang menunjukkan berapa lama buku tersebut sudah diterbitkan. 
+
+Dengan menggunakan kelas ini, pengguna dapat dengan mudah membuat objek buku dan mengakses informasi serta menghitung usia buku tersebut.
+
+```Python
+def main():
+    # Tahun saat ini
+    tahun_sekarang = int(input("Masukkan tahun saat ini: "))
+
+    # Memasukkan informasi buku melalui input
+    jumlah_buku = int(input("Berapa buku yang ingin Anda masukkan? "))
+
+    buku_list = []
+    
+    for i in range(jumlah_buku):
+        print(f"\nMasukkan informasi buku ke-{i + 1}:")
+        judul = input("Masukkan judul buku: ")
+        penulis = input("Masukkan penulis buku: ")
+        tahun_terbit = int(input("Masukkan tahun terbit buku: "))
+        buku = Buku(judul, penulis, tahun_terbit)
+        buku_list.append(buku)
+
+    # Menampilkan informasi dan usia setiap buku
+    for buku in buku_list:
+        buku.tampilkan_informasi()
+        usia = buku.hitung_usia_buku(tahun_sekarang)
+        print(f"Usia Buku: {usia} tahun\n")
+
+# Menjalankan program
+if __name__ == "__main__":
+    main()
+```
+Penjelasan :
+
+Fungsi `main` dalam kode ini berfungsi untuk mengelola interaksi pengguna dalam memasukkan dan menampilkan informasi buku. Berikut adalah penjelasan singkat mengenai setiap bagian:
+
+1. **Input Tahun Sekarang**: Program meminta pengguna untuk memasukkan tahun saat ini, yang akan digunakan untuk menghitung usia buku.
+
+2. **Input Jumlah Buku**: Pengguna diminta untuk memasukkan jumlah buku yang ingin mereka daftarkan.
+
+3. **Pengumpulan Data Buku**:
+   - Program membuat list kosong `buku_list` untuk menyimpan objek buku.
+   - Dalam loop, pengguna memasukkan informasi untuk setiap buku, termasuk judul, penulis, dan tahun terbit. Setiap informasi buku ini digunakan untuk membuat objek `Buku`, yang kemudian ditambahkan ke dalam `buku_list`.
+
+4. **Menampilkan Informasi Buku**: Setelah semua informasi buku dimasukkan, program akan menampilkan detail setiap buku dengan memanggil metode `tampilkan_informasi()` dari objek buku. Program juga menghitung dan menampilkan usia buku menggunakan metode `hitung_usia_buku()`.
+
+Dengan cara ini, program memungkinkan pengguna untuk dengan mudah memasukkan dan melihat informasi tentang beberapa buku serta menghitung berapa tahun buku tersebut telah diterbitkan.
+
+## Hasil output 
+```Python
+Masukkan tahun saat ini:  2024
+Berapa buku yang ingin Anda masukkan?  2
+
+Masukkan informasi buku ke-1:
+Masukkan judul buku:  3726 mdpl
+Masukkan penulis buku:  monn
+Masukkan tahun terbit buku:  2012
+
+Masukkan informasi buku ke-2:
+Masukkan judul buku:  Art
+Masukkan penulis buku:  Aji
+Masukkan tahun terbit buku:  2011
+Judul: 3726 mdpl
+Penulis: monn
+Tahun Terbit: 2012
+Usia Buku: 12 tahun
+
+Judul: Art
+Penulis: Aji
+Tahun Terbit: 2011
+Usia Buku: 13 tahun
+```
+Penjelasan :
+
+Output di atas menunjukkan hasil dari program yang dijalankan, di mana pengguna berhasil memasukkan informasi untuk dua buku. Berikut adalah rincian proses dan hasilnya:
+
+1. **Input Tahun Saat Ini**: Pengguna memasukkan tahun saat ini, yaitu **2024**.
+
+2. **Input Jumlah Buku**: Pengguna memilih untuk memasukkan **2** buku.
+
+3. **Informasi Buku Pertama**:
+   - Judul: **3726 mdpl**
+   - Penulis: **monn**
+   - Tahun Terbit: **2012**
+   - Program kemudian menghitung usia buku ini dengan mengurangkan tahun terbit dari tahun sekarang (2024 - 2012 = 12). Jadi, usia buku ini adalah **12 tahun**.
+
+4. **Informasi Buku Kedua**:
+   - Judul: **Art**
+   - Penulis: **Aji**
+   - Tahun Terbit: **2011**
+   - Program menghitung usia buku ini dengan cara yang sama (2024 - 2011 = 13). Oleh karena itu, usia buku ini adalah **13 tahun**.
+
+5. **Output Akhir**:
+   - Program menampilkan informasi lengkap untuk kedua buku, termasuk judul, penulis, tahun terbit, dan usia masing-masing buku.
+
+Program ini memberikan ringkasan yang jelas tentang buku-buku yang dimasukkan, serta menunjukkan kemampuan untuk menghitung usia buku berdasarkan tahun yang diberikan.
+
