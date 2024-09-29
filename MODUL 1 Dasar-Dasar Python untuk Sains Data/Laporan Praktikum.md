@@ -1333,3 +1333,120 @@ Output di atas menunjukkan hasil dari program yang dijalankan, di mana pengguna 
 
 Program ini memberikan ringkasan yang jelas tentang buku-buku yang dimasukkan, serta menunjukkan kemampuan untuk menghitung usia buku berdasarkan tahun yang diberikan.
 
+## Unguided 10
+
+### 10. [Algoritma dengan Persyaratan Logika Khusus]
+**Soal**: Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
+```Python
+def binary_search_even(arr, target):
+    # Cek apakah target adalah angka ganjil
+    if target % 2 != 0:
+        print(f"Nilai {target} adalah angka ganjil, tidak dapat ditemukan dalam list genap.")
+        return -1 
+
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        # Cek apakah nilai tengah adalah target
+        if arr[mid] == target:
+            return mid
+        # Jika target lebih kecil, abaikan setengah kanan
+        elif arr[mid] > target:
+            high = mid - 1
+        # Jika target lebih besar, abaikan setengah kiri
+        else:
+            low = mid + 1
+
+    # Jika nilai tidak ditemukan
+    return -1
+
+def main():
+    # Masukkan list genap (sorted) dari input pengguna
+    list_genap = list(map(int, input("Masukkan angka genap yang dipisahkan oleh spasi: ").split()))
+    
+    # Validasi untuk memastikan hanya angka genap
+    list_genap = [x for x in list_genap if x % 2 == 0]
+    
+    # Memasukkan target yang ingin dicari
+    target = int(input("Masukkan angka yang ingin dicari: "))
+
+    # Memanggil fungsi binary_search_even
+    result = binary_search_even(list_genap, target)
+
+    if result != -1:
+        print(f"Nilai {target} ditemukan di indeks {result}.")
+    else:
+        print(f"Nilai {target} tidak ditemukan di dalam list.")
+
+# Menjalankan program
+if __name__ == "__main__":
+    main()
+```
+```Python
+def binary_search_even(arr, target):
+    # Cek apakah target adalah angka ganjil
+    if target % 2 != 0:
+        print(f"Nilai {target} adalah angka ganjil, tidak dapat ditemukan dalam list genap.")
+        return -1 
+
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        # Cek apakah nilai tengah adalah target
+        if arr[mid] == target:
+            return mid
+        # Jika target lebih kecil, abaikan setengah kanan
+        elif arr[mid] > target:
+            high = mid - 1
+        # Jika target lebih besar, abaikan setengah kiri
+        else:
+            low = mid + 1
+
+    # Jika nilai tidak ditemukan
+    return -1
+```
+Penjelasan :
+
+Fungsi `binary_search_even` melakukan pencarian biner untuk menemukan indeks dari angka genap dalam sebuah daftar. Pertama, ia memeriksa apakah `target` adalah angka ganjil; jika ya, fungsi mengembalikan -1. Kemudian, fungsi menggunakan pendekatan pencarian biner, membagi daftar menjadi dua bagian hingga menemukan `target` atau kehabisan elemen untuk dicari. Jika angka ditemukan, indeksnya dikembalikan; jika tidak, -1 dikembalikan sebagai tanda bahwa angka tidak ada dalam daftar. Pencarian ini efisien, dengan kompleksitas waktu O(log n).
+
+```Python
+def main():
+    # Masukkan list genap (sorted) dari input pengguna
+    list_genap = list(map(int, input("Masukkan angka genap yang dipisahkan oleh spasi: ").split()))
+    
+    # Validasi untuk memastikan hanya angka genap
+    list_genap = [x for x in list_genap if x % 2 == 0]
+    
+    # Memasukkan target yang ingin dicari
+    target = int(input("Masukkan angka yang ingin dicari: "))
+
+    # Memanggil fungsi binary_search_even
+    result = binary_search_even(list_genap, target)
+
+    if result != -1:
+        print(f"Nilai {target} ditemukan di indeks {result}.")
+    else:
+        print(f"Nilai {target} tidak ditemukan di dalam list.")
+
+# Menjalankan program
+if __name__ == "__main__":
+    main()
+```
+Penjelasan :
+
+Fungsi `main` mengatur interaksi pengguna untuk melakukan pencarian biner angka genap dalam sebuah daftar. Pertama, pengguna diminta untuk memasukkan daftar angka genap yang dipisahkan oleh spasi, yang kemudian diubah menjadi list dari tipe integer. Fungsi ini memvalidasi input dengan memastikan hanya angka genap yang disimpan dalam `list_genap`. Selanjutnya, pengguna diminta untuk memasukkan angka yang ingin dicari. Fungsi `binary_search_even` kemudian dipanggil untuk mencari angka tersebut dalam daftar. Hasil pencarian ditampilkan, dengan informasi tentang apakah angka ditemukan beserta indeksnya jika ada. Program ini efektif untuk mencari angka dalam daftar yang telah diurutkan dan berisi hanya angka genap.
+
+## Hasil output 
+```Python
+Masukkan angka genap yang dipisahkan oleh spasi:  2 4 6 8 10 
+Masukkan angka yang ingin dicari:  4
+Nilai 4 ditemukan di indeks 1.
+```
+Penjelasan :
+
+Dalam output tersebut, pengguna pertama kali memasukkan daftar angka genap `2 4 6 8 10`, yang diproses dan disimpan dalam list. Setelah itu, pengguna mencari angka `4`. Program kemudian menggunakan fungsi `binary_search_even` untuk mencari angka tersebut dalam list. Hasilnya menunjukkan bahwa angka `4` ditemukan di indeks `1`, yang berarti angka tersebut berada di posisi kedua dalam list (karena indeks dimulai dari 0). Ini mengindikasikan bahwa pencarian biner berfungsi dengan baik untuk menemukan angka dalam daftar yang telah diurutkan.
+
