@@ -102,7 +102,7 @@ Kuadrat dari 2 adalah 4
 ```
 Penjelasan :
 
-Program ini memberikan cara sederhana untuk menghitung kuadrat dari angka yang dimasukkan oleh pengguna dan mencetak hasilnya. Anda dapat mencoba dengan berbagai angka untuk melihat hasilnya. Jika ada yang ingin Anda tanyakan lebih lanjut, silakan beri tahu
+Program ini memberikan cara sederhana untuk menghitung kuadrat dari angka yang dimasukkan oleh pengguna dan mencetak hasilnya. Anda dapat mencoba dengan berbagai angka untuk melihat hasilnya. 
 
 ## Guided 2
 
@@ -219,7 +219,7 @@ Jumlah huruf vokal dalam string adalah: 7
 ```
 Penjelasan : 
 
-Program ini memberikan cara yang sederhana dan efektif untuk menghitung huruf vokal dalam sebuah teks. Jika Anda memiliki pertanyaan lebih lanjut atau ingin mengubah fungsionalitasnya, silakan beri tahu!
+Program ini memberikan cara yang sederhana dan efektif untuk menghitung huruf vokal dalam sebuah teks. 
 
 ## Guided 4
 ### 4. [ OOP (Object-Oriented Programming) ]
@@ -307,4 +307,102 @@ Umur: 16
 ```
 Penjelasan :
 
-Program ini merupakan contoh dasar OOP di Python, di mana kita mendefinisikan kelas dengan atribut dan method. Program ini memungkinkan pengguna untuk berinteraksi dengan kelas Mahasiswa, menciptakan objek baru, dan menampilkan informasi yang relevan. Jika Anda memiliki pertanyaan lebih lanjut atau ingin menambahkan fitur lain, silakan beri tahu!
+Program ini merupakan contoh dasar OOP di Python, di mana kita mendefinisikan kelas dengan atribut dan method. Program ini memungkinkan pengguna untuk berinteraksi dengan kelas Mahasiswa, menciptakan objek baru, dan menampilkan informasi yang relevan. 
+
+## Unguided 1
+
+### 1. [Memecahkan Masalah Unik dengan Loop dan If-Else]
+**Soal**: Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya:
+
+```Python
+def is_prime(n):
+    """Cek apakah suatu bilangan adalah bilangan prima."""
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def generate_primes(num_primes):
+    """Menghasilkan daftar bilangan prima sebanyak num_primes."""
+    primes = []
+    candidate = 2  
+    while len(primes) < num_primes:
+        if is_prime(candidate):
+            primes.append(candidate)
+        candidate += 1
+    return primes
+
+def generate_pattern(rows):
+    """Menghasilkan pola bilangan prima sesuai jumlah baris yang diinginkan."""
+    primes = generate_primes((rows * (rows + 1)) // 2) 
+    index = 0  # Indeks untuk mengambil bilangan prima
+
+    for i in range(1, rows + 1):
+        line = []
+        for j in range(i):  
+            line.append(primes[index])
+            index += 1
+        print(" ".join(map(str, line)))
+
+generate_pattern(5)
+```
+```Python
+def is_prime(n):
+    """Cek apakah suatu bilangan adalah bilangan prima."""
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+```
+Penjelasan :
+
+Fungsi `is_prime(n)` adalah fungsi yang digunakan untuk memeriksa apakah suatu bilangan merupakan bilangan prima. Fungsi ini menerima satu argumen, `n`, yang merupakan bilangan yang akan diperiksa. Di dalam fungsi, terdapat dokumentasi yang menjelaskan tujuan fungsi tersebut, yaitu untuk mengecek apakah suatu bilangan adalah bilangan prima. Pertama, fungsi memeriksa apakah `n` kurang dari atau sama dengan 1. Bilangan prima adalah bilangan bulat positif yang lebih besar dari 1; oleh karena itu, jika `n` memenuhi kondisi tersebut, fungsi akan mengembalikan nilai `False`. Selanjutnya, fungsi melakukan loop untuk memeriksa apakah `n` dapat dibagi oleh bilangan bulat dari 2 hingga akar kuadrat dari `n`, yang dihitung menggunakan `int(n**0.5)`. Hal ini dilakukan karena jika `n` dapat dibagi oleh suatu bilangan `i`, maka `n` juga dapat dibagi oleh `n/i`, dan salah satu dari kedua bilangan ini pasti kurang dari atau sama dengan akar kuadrat dari `n`. Di dalam loop, fungsi memeriksa apakah `n` habis dibagi oleh `i` dengan menggunakan operator modulus (`%`). Jika `n` habis dibagi oleh `i`, maka `n` bukan bilangan prima, dan fungsi mengembalikan nilai `False`. Namun, jika tidak ada faktor pembagi yang ditemukan selama proses pengecekan, maka dapat disimpulkan bahwa `n` adalah bilangan prima, sehingga fungsi mengembalikan nilai `True`.
+
+```Python
+def generate_primes(num_primes):
+    """Menghasilkan daftar bilangan prima sebanyak num_primes."""
+    primes = []
+    candidate = 2  
+    while len(primes) < num_primes:
+        if is_prime(candidate):
+            primes.append(candidate)
+        candidate += 1
+    return primes
+```
+Penjelasan :
+
+Generate_primes(num_primes) ini menyediakan cara yang efisien untuk menghasilkan sejumlah bilangan prima. Dengan menggunakan fungsi is_prime untuk memeriksa keprimaan setiap kandidat, fungsi ini secara bertahap membangun daftar bilangan prima yang diinginkan.
+
+```Python
+def generate_pattern(rows):
+    """Menghasilkan pola bilangan prima sesuai jumlah baris yang diinginkan."""
+    primes = generate_primes((rows * (rows + 1)) // 2) 
+    index = 0  # Indeks untuk mengambil bilangan prima
+
+    for i in range(1, rows + 1):
+        line = []
+        for j in range(i):  
+            line.append(primes[index])
+            index += 1
+        print(" ".join(map(str, line)))
+
+generate_pattern(5)
+```
+Penjelasan :
+
+Fungsi `generate_pattern(rows)` menghasilkan pola bilangan prima dalam format segitiga berdasarkan jumlah baris yang ditentukan oleh argumen `rows`. Fungsi ini pertama-tama memanggil `generate_primes` untuk menghitung total bilangan prima yang dibutuhkan, menggunakan rumus `(rows * (rows + 1)) // 2`. Dengan menggunakan loop dari 1 hingga `rows`, fungsi ini menambahkan bilangan prima ke dalam daftar `line` sesuai dengan jumlah yang diperlukan untuk setiap baris, kemudian mencetaknya sebagai string yang dipisahkan oleh spasi. Misalnya, jika dijalankan dengan argumen `5`, fungsi ini akan menghasilkan pola segitiga bilangan prima dengan 5 baris. Fungsi ini menyediakan cara efisien untuk menampilkan bilangan prima dalam format menarik dan dapat disesuaikan.
+
+## Hasil output
+```Python
+2
+3 5
+7 11 13
+17 19 23 29
+31 37 41 43 47
+```
+Penjelasan :
+
