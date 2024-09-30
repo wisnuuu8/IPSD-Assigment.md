@@ -5,46 +5,17 @@
 
  **Dasar Dasar Python untuk sains data**:
 
-### 1. **Variabel dan Tipe Data**
-   - **Variabel**: Menyimpan nilai yang bisa digunakan kembali.
-   - **Tipe data dasar**:
-     - `int`: Bilangan bulat (misal: `x = 10`)
-     - `float`: Bilangan desimal (misal: `y = 10.5`)
-     - `str`: Teks (misal: `nama = "Data Science"`)
-     - `bool`: Nilai benar/salah (misal: `is_active = True`)
+Python merupakan salah satu bahasa pemrograman yang banyak digunakan dalam sains data karena kesederhanaannya dan dukungan ekosistem yang kaya[1]. Dalam Python, variabel digunakan untuk menyimpan nilai yang dapat digunakan kembali, dengan tipe data dasar seperti *int* untuk bilangan bulat (misal: `x = 10`), *float* untuk bilangan desimal (misal: `y = 10.5`), *str* untuk teks (misal: `nama = "Data Science"`), dan *bool* untuk nilai benar/salah (misal: `is_active = True`). Python juga menyediakan berbagai struktur data penting, seperti *list* untuk kumpulan nilai yang terurut (misal: `data = [1, 2, 3]`), *dictionary* untuk pasangan kunci-nilai (misal: `data = {'nama': 'Andi', 'umur': 25}`), *tuple* untuk kumpulan nilai yang tidak dapat diubah (misal: `koordinat = (10, 20)`), dan *set* untuk kumpulan nilai unik (misal: `angka_unik = {1, 2, 3}`).
 
-### 2. **Struktur Data**
-   - **List**: Kumpulan nilai terurut (misal: `data = [1, 2, 3]`)
-   - **Dictionary**: Pasangan kunci-nilai (misal: `data = {'nama': 'Andi', 'umur': 25}`)
-   - **Tuple**: Kumpulan nilai tidak bisa diubah (misal: `koordinat = (10, 20)`)
-   - **Set**: Kumpulan nilai unik (misal: `angka_unik = {1, 2, 3}`)
+Kontrol alur dalam Python dapat diatur menggunakan struktur *if-else* untuk membuat keputusan berdasarkan kondisi tertentu, serta perulangan (*looping*) dengan *for* dan *while* untuk mengulangi eksekusi kode. Modularisasi kode juga dapat dicapai melalui fungsi, seperti fungsi `hitung_rata_rata` yang menghitung rata-rata dari sebuah data: 
+```python
+def hitung_rata_rata(data):
+    return sum(data) / len(data)
+```
 
-### 3. **Kontrol Alur**
-   - **If-else**: Struktur untuk membuat keputusan.
-   - **Looping**: Untuk iterasi, menggunakan `for` dan `while`.
+Dalam sains data, beberapa perpustakaan Python yang sering digunakan antara lain: **NumPy** untuk komputasi numerik, **Pandas** untuk manipulasi dan analisis data, serta **Matplotlib** dan **Seaborn** untuk visualisasi data. Selain itu, **Scikit-learn** juga penting untuk keperluan *machine learning* dan analisis statistik. Untuk menangani file I/O, seperti membaca dan menulis file CSV, Pandas mempermudah dengan perintah seperti `pd.read_csv('data.csv')`.
 
-### 4. **Fungsi**
-   - Memudahkan modularisasi kode. Contoh:
-     ```python
-     def hitung_rata_rata(data):
-         return sum(data) / len(data)
-     ```
-
-### 5. **Libraries untuk Data Science**
-   - **NumPy**: Untuk komputasi numerik.
-   - **Pandas**: Untuk manipulasi dan analisis data.
-   - **Matplotlib dan Seaborn**: Untuk visualisasi data.
-   - **Scikit-learn**: Untuk machine learning dan statistik.
-
-### 6. **File I/O**
-   - Membaca dan menulis data, seperti file CSV, menggunakan Pandas:
-     ```python
-     import pandas as pd
-     df = pd.read_csv('data.csv')
-     ```
-
-### 7. **Jupyter Notebook**
-   - Alat interaktif untuk eksplorasi data, penulisan catatan, dan visualisasi langsung.[1]
+Selain itu, **Jupyter Notebook** adalah alat interaktif yang sangat berguna dalam eksplorasi data, memungkinkan penulisan catatan dan visualisasi secara langsung. Dengan alat dan konsep ini, Python menjadi fondasi yang kuat untuk menjalankan berbagai tugas di bidang sains data.
 
 ## Guided 1
 
