@@ -181,6 +181,7 @@ Program ini memberikan cara yang sederhana dan efektif untuk menghitung huruf vo
 ## Guided 4
 ### 4. [ OOP (Object-Oriented Programming) ]
 **76. Buat class `Mahasiswa` yang memiliki atribut nama dan umur.**
+
 ![Screenshot 2024-09-29 171414](https://github.com/user-attachments/assets/4b4f9b5f-d282-4271-83cc-fb95e04968eb)
 
 ```Python
@@ -867,7 +868,9 @@ Program ini memberikan ringkasan yang jelas tentang buku-buku yang dimasukkan, s
 
 ### 10. [Algoritma dengan Persyaratan Logika Khusus]
 **Soal**: Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
+
 ![Screenshot 2024-09-29 173111](https://github.com/user-attachments/assets/21b9d1fd-8383-456e-bae7-2f69716f8850)
+
 ![Screenshot 2024-09-29 173146](https://github.com/user-attachments/assets/531733e5-3622-413f-bb68-655b87a14808)
 
 ```Python
@@ -940,7 +943,11 @@ Python merupakan bahasa pemrograman yang penting dalam sains data, menawarkan ke
 ## Referensi
 
 [1] Karimah Tauhid, Volume 2 Nomor 1 (2023), e-ISSN 2963-590X | Alfarizi et al.
+
 [2] Romzi1, M. (2020). PEMBELAJARAN PEMROGRAMAN PYTHON DENGAN PENDEKATAN LOGIKA ALGORITMA. 37-44.
+
 [3] Raihan Muhammad1*, S. Y. (2023). PENERAPAN PEMROGRAMAN PYTHON DALAM MENENTUKAN WAKTU OVERHOUL KONDENSOR TURBIN UAP. 49-57.
+
 [4] Trie Maya Kadarina, M. H. (2019). PENGENALAN BAHASA PEMROGRAMAN PYTHON MENGGUNAKAN APLIKASI GAMES UNTUK SISWA/I DI WILAYAH KEMBANGAN UTARA. 11-16.
+
 [5] Wilyani, F. (2024). Pengenalan Dasar Pemrograman Python Dengan Google Colaboratory . 08-14
