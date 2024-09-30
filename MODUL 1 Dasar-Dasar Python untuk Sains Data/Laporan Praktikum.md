@@ -8,10 +8,6 @@
 Python merupakan salah satu bahasa pemrograman yang banyak digunakan dalam sains data karena kesederhanaannya dan dukungan ekosistem yang kaya[1]. Dalam Python, variabel digunakan untuk menyimpan nilai yang dapat digunakan kembali, dengan tipe data dasar seperti *int* untuk bilangan bulat (misal: `x = 10`), *float* untuk bilangan desimal (misal: `y = 10.5`), *str* untuk teks (misal: `nama = "Data Science"`), dan *bool* untuk nilai benar/salah (misal: `is_active = True`). Python juga menyediakan berbagai struktur data penting, seperti *list* untuk kumpulan nilai yang terurut (misal: `data = [1, 2, 3]`), *dictionary* untuk pasangan kunci-nilai (misal: `data = {'nama': 'Andi', 'umur': 25}`), *tuple* untuk kumpulan nilai yang tidak dapat diubah (misal: `koordinat = (10, 20)`), dan *set* untuk kumpulan nilai unik (misal: `angka_unik = {1, 2, 3}`).
 
 Kontrol alur dalam Python dapat diatur menggunakan struktur *if-else* untuk membuat keputusan berdasarkan kondisi tertentu, serta perulangan (*looping*) dengan *for* dan *while* untuk mengulangi eksekusi kode. Modularisasi kode juga dapat dicapai melalui fungsi, seperti fungsi `hitung_rata_rata` yang menghitung rata-rata dari sebuah data: 
-```python
-def hitung_rata_rata(data):
-    return sum(data) / len(data)
-```
 
 Dalam sains data, beberapa perpustakaan Python yang sering digunakan antara lain: **NumPy** untuk komputasi numerik, **Pandas** untuk manipulasi dan analisis data, serta **Matplotlib** dan **Seaborn** untuk visualisasi data. Selain itu, **Scikit-learn** juga penting untuk keperluan *machine learning* dan analisis statistik. Untuk menangani file I/O, seperti membaca dan menulis file CSV, Pandas mempermudah dengan perintah seperti `pd.read_csv('data.csv')`.
 
