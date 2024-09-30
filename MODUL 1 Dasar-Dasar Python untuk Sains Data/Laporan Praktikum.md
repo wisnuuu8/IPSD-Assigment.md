@@ -50,19 +50,9 @@
 
 ### 1. [Lambda dan Higher-Order Functions]
 **89. Buat fungsi lambda untuk menghitung kuadrat dari sebuah angka.**
-```Python
-# Fungsi lambda untuk menghitung kuadrat
-kuadrat = lambda x: x ** 2
 
-# Memasukkan input dari pengguna
-angka = int(input("Masukkan sebuah angka: "))
+![Screenshot 2024-09-29 171036](https://github.com/user-attachments/assets/94d0c26a-edf0-4f7b-95e4-6b9b642648c3)
 
-# Menghitung kuadrat dari angka yang dimasukkan
-hasil = kuadrat(angka)
-
-# Menampilkan hasil
-print(f"Kuadrat dari {angka} adalah {hasil}")
-```
 ```Python
 # Fungsi lambda untuk menghitung kuadrat
 kuadrat = lambda x: x ** 2
@@ -96,10 +86,8 @@ Penjelasan :
 Program menghitung kuadrat dari angka yang dimasukkan menggunakan fungsi lambda dan kemudian menampilkan hasilnya.[3]
 
 ## Hasil output
-```Python
-Masukkan sebuah angka:  2
-Kuadrat dari 2 adalah 4
-```
+![Screenshot 2024-09-29 171125](https://github.com/user-attachments/assets/4639b0b9-015b-4fef-b6fa-47dc2daa8257)
+
 Penjelasan :
 
 Program ini memberikan cara sederhana untuk menghitung kuadrat dari angka yang dimasukkan oleh pengguna dan mencetak hasilnya. Anda dapat mencoba dengan berbagai angka untuk melihat hasilnya. 
@@ -108,19 +96,8 @@ Program ini memberikan cara sederhana untuk menghitung kuadrat dari angka yang d
 
 ### 2. [ Modules dan Packages ]
 **84. Buat program yang meng-import modul matematika dan menggunakan fungsi `sqrt`.**
-```Python
-# Meng-import modul matematika
-import math
+![Screenshot 2024-09-29 171156](https://github.com/user-attachments/assets/805e990a-7d24-4b5a-9c11-0d8874714d06)
 
-# Memasukkan input dari pengguna
-angka = float(input("Masukkan sebuah angka: "))
-
-# Menggunakan fungsi sqrt dari modul math untuk menghitung akar kuadrat
-hasil = math.sqrt(angka)
-
-# Menampilkan hasil
-print(f"Akar kuadrat dari {angka} adalah {hasil}")
-```
 ```Python
 # Meng-import modul matematika
 import math
@@ -160,10 +137,8 @@ Penjelasan :
 Program menampilkan hasil akar kuadrat dalam format yang jelas.
 
 ## Hasil output 
-```Python
-Masukkan sebuah angka:  4
-Akar kuadrat dari 4.0 adalah 2.0
-```
+![Screenshot 2024-09-29 171230](https://github.com/user-attachments/assets/741ec8df-0de8-4a3c-a33c-9b5fa0c668fc)
+
 Penjelasan :
 
 Program menampilkan "Akar kuadrat dari 25.0 adalah 5.0".
@@ -173,24 +148,8 @@ Program menampilkan "Akar kuadrat dari 25.0 adalah 5.0".
 ## Guided 3
 ### 3. [ Miscellaneous ]
 **93. Buat program untuk menghitung jumlah huruf vokal dalam sebuah string.**
-```Python
-## Miscellaneous
-def hitung_huruf_vokal(teks):
-    vokal = "aiueoAIUEO"
-    jumlah_vokal = 0
+![Screenshot 2024-09-29 171308](https://github.com/user-attachments/assets/c366f3ee-3cd3-4934-8541-0fe8b5bbaac7)
 
-    for huruf in teks:
-        if huruf in vokal:
-            jumlah_vokal += 1
-
-    return jumlah_vokal
-
-# Contoh penggunaan
-teks = input("Masukkan sebuah string: ")
-jumlah = hitung_huruf_vokal(teks)
-
-print(f"Jumlah huruf vokal dalam string adalah: {jumlah}")
-```
 Penjelasan :
 
 Fungsi hitung_huruf_vokal(teks):
@@ -213,10 +172,8 @@ Fungsi hitung_huruf_vokal(teks) dipanggil dengan string tersebut untuk menghitun
 Hasil jumlah vokal ditampilkan di layar.
 
 ## Hssil output 
-```Python
-Masukkan sebuah string:  wisnu aji sanjaya 
-Jumlah huruf vokal dalam string adalah: 7
-```
+![Screenshot 2024-09-29 171339](https://github.com/user-attachments/assets/d03350db-5d21-4753-8bf2-e70800402894)
+
 Penjelasan : 
 
 Program ini memberikan cara yang sederhana dan efektif untuk menghitung huruf vokal dalam sebuah teks. 
@@ -224,28 +181,8 @@ Program ini memberikan cara yang sederhana dan efektif untuk menghitung huruf vo
 ## Guided 4
 ### 4. [ OOP (Object-Oriented Programming) ]
 **76. Buat class `Mahasiswa` yang memiliki atribut nama dan umur.**
-```Python
-class Mahasiswa:
-    # Konstruktor untuk inisialisasi atribut nama dan umur
-    def __init__(self, nama, umur):
-        self.nama = nama
-        self.umur = umur
+![Screenshot 2024-09-29 171414](https://github.com/user-attachments/assets/4b4f9b5f-d282-4271-83cc-fb95e04968eb)
 
-    # Method untuk menampilkan informasi mahasiswa
-    def tampilkan_info(self):
-        print(f"Nama: {self.nama}")
-        print(f"Umur: {self.umur}")
-
-# Memasukkan data mahasiswa dari input pengguna
-nama = input("Masukkan nama mahasiswa: ")
-umur = int(input("Masukkan umur mahasiswa: "))
-
-# Membuat objek Mahasiswa dengan input pengguna
-mahasiswa = Mahasiswa(nama, umur)
-
-# Memanggil method untuk menampilkan informasi
-mahasiswa.tampilkan_info()
-```
 ```Python
 class Mahasiswa:
     # Konstruktor untuk inisialisasi atribut nama dan umur
@@ -299,12 +236,8 @@ Menampilkan Informasi:
 mahasiswa.tampilkan_info(): Memanggil method tampilkan_info() pada objek mahasiswa untuk menampilkan informasi yang telah diinput.
 
 ## Hasil output 
-```Python
-Masukkan nama mahasiswa:  wisnu
-Masukkan umur mahasiswa:  16
-Nama: wisnu
-Umur: 16
-```
+![Screenshot 2024-09-29 171542](https://github.com/user-attachments/assets/f1f6e67c-f4b8-4f32-8245-b831f84cd7cd)
+
 Penjelasan :
 
 Program ini merupakan contoh dasar OOP di Python, di mana kita mendefinisikan kelas dengan atribut dan method. Program ini memungkinkan pengguna untuk berinteraksi dengan kelas Mahasiswa, menciptakan objek baru, dan menampilkan informasi yang relevan. 
@@ -314,40 +247,8 @@ Program ini merupakan contoh dasar OOP di Python, di mana kita mendefinisikan ke
 ### 1. [Memecahkan Masalah Unik dengan Loop dan If-Else]
 **Soal**: Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya:
 
-```Python
-def is_prime(n):
-    """Cek apakah suatu bilangan adalah bilangan prima."""
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+![Screenshot 2024-09-29 171627](https://github.com/user-attachments/assets/dc6f1f89-9751-4d9f-9126-a74dc35ad344)
 
-def generate_primes(num_primes):
-    """Menghasilkan daftar bilangan prima sebanyak num_primes."""
-    primes = []
-    candidate = 2  
-    while len(primes) < num_primes:
-        if is_prime(candidate):
-            primes.append(candidate)
-        candidate += 1
-    return primes
-
-def generate_pattern(rows):
-    """Menghasilkan pola bilangan prima sesuai jumlah baris yang diinginkan."""
-    primes = generate_primes((rows * (rows + 1)) // 2) 
-    index = 0  # Indeks untuk mengambil bilangan prima
-
-    for i in range(1, rows + 1):
-        line = []
-        for j in range(i):  
-            line.append(primes[index])
-            index += 1
-        print(" ".join(map(str, line)))
-
-generate_pattern(5)
-```
 ```Python
 def is_prime(n):
     """Cek apakah suatu bilangan adalah bilangan prima."""
@@ -397,13 +298,8 @@ Penjelasan :
 Fungsi `generate_pattern(rows)` menghasilkan pola bilangan prima dalam format segitiga berdasarkan jumlah baris yang ditentukan oleh argumen `rows`. Fungsi ini pertama-tama memanggil `generate_primes` untuk menghitung total bilangan prima yang dibutuhkan, menggunakan rumus `(rows * (rows + 1)) // 2`. Dengan menggunakan loop dari 1 hingga `rows`, fungsi ini menambahkan bilangan prima ke dalam daftar `line` sesuai dengan jumlah yang diperlukan untuk setiap baris, kemudian mencetaknya sebagai string yang dipisahkan oleh spasi. Misalnya, jika dijalankan dengan argumen `5`, fungsi ini akan menghasilkan pola segitiga bilangan prima dengan 5 baris. Fungsi ini menyediakan cara efisien untuk menampilkan bilangan prima dalam format menarik dan dapat disesuaikan.
 
 ## Hasil output
-```Python
-2
-3 5
-7 11 13
-17 19 23 29
-31 37 41 43 47
-```
+![Screenshot 2024-09-29 171704](https://github.com/user-attachments/assets/1d389a0f-a249-43bc-9411-66e7d950c503)
+
 Penjelasan :
 
 Output menampilkan pola segitiga yang diisi dengan bilangan prima, sesuai dengan jumlah baris yang diminta. Ini menunjukkan bagaimana fungsi bekerja secara terintegrasi untuk menghasilkan dan menampilkan bilangan prima dalam format yang teratur dan mudah dibaca.
@@ -413,29 +309,8 @@ Output menampilkan pola segitiga yang diisi dengan bilangan prima, sesuai dengan
 ### 2. [Membuat Fungsi dengan Syarat Spesifik]
 **Soal**: Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
 
-```Python
-def combine_and_sort_odd_indices(list1, list2):
-    """Menggabungkan elemen dari dua list yang memiliki indeks ganjil dan mengurutkannya secara menurun."""
-    # Mengambil elemen dengan indeks ganjil dari kedua list
-    odd_indexed_elements = []
-    
-    # Menambahkan elemen dengan indeks ganjil dari list1
-    odd_indexed_elements.extend(list1[i] for i in range(1, len(list1), 2))
-    
-    # Menambahkan elemen dengan indeks ganjil dari list2
-    odd_indexed_elements.extend(list2[i] for i in range(1, len(list2), 2))
-    
-    # Mengurutkan elemen secara menurun
-    odd_indexed_elements.sort(reverse=True)
-    
-    return odd_indexed_elements
+![Screenshot 2024-09-29 171745](https://github.com/user-attachments/assets/55a75e60-3573-4639-b62c-949f07f60683)
 
-# Contoh penggunaan
-list1 = [10, 20, 30, 40, 50]
-list2 = [5, 15, 25, 35, 45]
-result = combine_and_sort_odd_indices(list1, list2)
-print(result) 
-```
 ```Python
 def combine_and_sort_odd_indices(list1, list2):
     """Menggabungkan elemen dari dua list yang memiliki indeks ganjil dan mengurutkannya secara menurun."""
@@ -458,54 +333,16 @@ Penjelassan :
 Fungsi `combine_and_sort_odd_indices(list1, list2)` menggabungkan elemen-elemen dari dua list yang memiliki indeks ganjil dan mengurutkannya secara menurun. Pertama, fungsi mengumpulkan elemen dari `list1` dan `list2` yang terletak pada indeks ganjil ke dalam daftar `odd_indexed_elements`. Setelah semua elemen terkumpul, fungsi kemudian mengurutkannya dalam urutan menurun menggunakan metode `sort()`. Terakhir, fungsi mengembalikan daftar yang sudah digabungkan dan diurutkan.
 
 ## Hasil output 
-```Python
-[40, 35, 20, 15]
-```
+![Screenshot 2024-09-29 171816](https://github.com/user-attachments/assets/b657b17a-5e8f-4e52-aac4-ad1a10052025)
+
 
 ## Unguided 3
 
 ### 3. [Exception Handling dalam Konteks Nyata]
 **Soal**: Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus:
-```Python
-def atm_simulation():
-    # PIN dan saldo awal
-    correct_pin = "1234"
-    balance = 10000  # Saldo awal
-    attempts = 3
+![Screenshot 2024-09-29 171854](https://github.com/user-attachments/assets/a5ef8864-5985-480a-8bbc-45d3ca0d8e2e)
+![Screenshot 2024-09-29 171930](https://github.com/user-attachments/assets/fad907ef-bcbe-4e36-a083-7cc90436ba2e)
 
-    # Meminta pengguna untuk memasukkan PIN
-    while attempts > 0:
-        pin = input("Masukkan PIN Anda: ")
-        if pin == correct_pin:
-            print("PIN benar.")
-            break
-        else:
-            attempts -= 1
-            print(f"PIN salah. Sisa percobaan: {attempts}")
-
-    if attempts == 0:
-        print("Akses ditolak. Terlalu banyak percobaan.")
-        return
-
-    # Meminta jumlah penarikan
-    try:
-        amount = float(input("Masukkan jumlah yang ingin ditarik: "))
-        
-        if amount <= 0:
-            raise ValueError("Jumlah penarikan harus lebih dari 0.")
-        
-        if amount > balance:
-            raise ValueError("Saldo tidak cukup untuk penarikan ini.")
-
-        # Melakukan penarikan
-        balance -= amount
-        print(f"Penarikan berhasil. Saldo akhir Anda adalah: {balance}")
-        
-    except ValueError as e:
-        print(f"Kesalahan: {e}")
-
-atm_simulation()
-```
 ```Python
 def atm_simulation():
     # PIN dan saldo awal
@@ -556,14 +393,8 @@ Penjelasan :
 Bagian kode ini menambahkan fungsi untuk meminta pengguna memasukkan jumlah uang yang ingin ditarik setelah PIN berhasil diverifikasi. Pengguna diminta untuk memasukkan jumlah penarikan, dan kode melakukan validasi input dengan menggunakan blok `try` dan `except` untuk menangani kesalahan. Jika jumlah penarikan kurang dari atau sama dengan nol, atau jika saldo tidak cukup, akan muncul pesan kesalahan. Jika input valid, jumlah penarikan akan dikurangkan dari saldo dan saldo akhir ditampilkan. Dengan demikian, kode ini menyelesaikan simulasi penarikan uang dari mesin ATM.
 
 ## Hasil output
-```Python
-Masukkan PIN Anda:  3
-PIN salah. Sisa percobaan: 2
-Masukkan PIN Anda:  1234
-PIN benar.
-Masukkan jumlah yang ingin ditarik:  1000
-Penarikan berhasil. Saldo akhir Anda adalah: 9000.0
-```
+![Screenshot 2024-09-29 172002](https://github.com/user-attachments/assets/4bcbfee5-a289-46b4-8e71-2e9811e5181e)
+
 Penjelasan :
 
 Output menunjukkan langkah-langkah interaksi pengguna dengan mesin ATM. Pertama, pengguna memasukkan PIN "3" yang salah, dan program memberi tahu bahwa PIN salah dengan sisa percobaan 2. Selanjutnya, pengguna memasukkan PIN yang benar, "1234", dan berhasil diverifikasi. Setelah itu, pengguna diminta untuk memasukkan jumlah penarikan, yaitu 1000. Program berhasil memproses penarikan dan menampilkan saldo akhir sebagai 9000. Output mencerminkan proses autentikasi dan penarikan uang yang berhasil.
@@ -573,56 +404,9 @@ Output menunjukkan langkah-langkah interaksi pengguna dengan mesin ATM. Pertama,
 ### 4. [Studi Kasus Pengelolaan Data]
 **Soal**: Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis sebuah program yang:
 
-```Python
-import csv
+![Screenshot 2024-09-29 172029](https://github.com/user-attachments/assets/8e402b4e-6100-4a3e-9392-7316092ed642)
+![Screenshot 2024-09-29 172128](https://github.com/user-attachments/assets/0f6445df-565f-45db-8c72-c04873c79957)
 
-def baca_data_csv(nama_file):
-    # Membaca file CSV dan menyimpan data ke dalam dictionary
-    data_mahasiswa = {}
-    
-    with open(nama_file, newline='') as file_csv:
-        reader = csv.reader(file_csv)
-        # Mengabaikan header jika ada
-        next(reader)  
-        for row in reader:
-            nama = row[0]
-            # Mengubah nilai menjadi float dan menyimpannya sebagai list
-            nilai = list(map(float, row[1:]))
-            data_mahasiswa[nama] = nilai
-    
-    return data_mahasiswa
-
-def hitung_rata_rata(data_mahasiswa):
-    # Menghitung rata-rata nilai tiap mahasiswa
-    rata_rata_mahasiswa = {}
-    for nama, nilai in data_mahasiswa.items():
-        rata_rata = sum(nilai) / len(nilai)
-        rata_rata_mahasiswa[nama] = rata_rata
-    
-    return rata_rata_mahasiswa
-
-def cari_mahasiswa_terbaik_terburuk(rata_rata_mahasiswa):
-    # Mencari mahasiswa dengan nilai tertinggi dan terendah
-    mahasiswa_terbaik = max(rata_rata_mahasiswa, key=rata_rata_mahasiswa.get)
-    mahasiswa_terburuk = min(rata_rata_mahasiswa, key=rata_rata_mahasiswa.get)
-    
-    return mahasiswa_terbaik, mahasiswa_terburuk
-
-nama_file = 'siswa_nilai (1).csv'
-
-data_mahasiswa = baca_data_csv(nama_file)
-
-rata_rata_mahasiswa = hitung_rata_rata(data_mahasiswa)
-
-mahasiswa_terbaik, mahasiswa_terburuk = cari_mahasiswa_terbaik_terburuk(rata_rata_mahasiswa)
-
-print("Rata-rata nilai tiap mahasiswa:")
-for nama, rata_rata in rata_rata_mahasiswa.items():
-    print(f"{nama}: {rata_rata:.2f}")
-
-print(f"\nMahasiswa dengan nilai tertinggi: {mahasiswa_terbaik} dengan rata-rata {rata_rata_mahasiswa[mahasiswa_terbaik]:.2f}")
-print(f"Mahasiswa dengan nilai terendah: {mahasiswa_terburuk} dengan rata-rata {rata_rata_mahasiswa[mahasiswa_terburuk]:.2f}")
-```
 ```Python
 import csv
 
@@ -690,112 +474,10 @@ Penjelasan :
 Kode ini berfungsi untuk membaca data mahasiswa dari file CSV dan melakukan analisis performa akademis mereka. Pertama, fungsi `baca_data_csv` digunakan untuk mengimpor data ke dalam dictionary bernama `data_mahasiswa`. Selanjutnya, fungsi `hitung_rata_rata` menghitung rata-rata nilai untuk setiap mahasiswa dan menyimpannya dalam dictionary `rata_rata_mahasiswa`. Kemudian, fungsi `cari_mahasiswa_terbaik_terburuk` digunakan untuk menentukan mahasiswa dengan rata-rata nilai tertinggi dan terendah. Terakhir, program menampilkan rata-rata nilai tiap mahasiswa serta nama mahasiswa yang memiliki nilai tertinggi dan terendah, memberikan gambaran ringkas tentang kinerja akademis mereka.
 
 ## Hasil output
-```Python
-Rata-rata nilai tiap mahasiswa:
-Siswa_1: 59.00
-Siswa_2: 79.00
-Siswa_3: 61.00
-Siswa_4: 74.00
-Siswa_5: 50.00
-Siswa_6: 70.00
-Siswa_7: 100.00
-Siswa_8: 84.00
-Siswa_9: 78.00
-Siswa_10: 61.00
-Siswa_11: 92.00
-Siswa_12: 60.00
-Siswa_13: 78.00
-Siswa_14: 87.00
-Siswa_15: 57.00
-Siswa_16: 73.00
-Siswa_17: 53.00
-Siswa_18: 54.00
-Siswa_19: 97.00
-Siswa_20: 52.00
-Siswa_21: 84.00
-Siswa_22: 89.00
-Siswa_23: 52.00
-Siswa_24: 90.00
-Siswa_25: 52.00
-Siswa_26: 64.00
-Siswa_27: 96.00
-Siswa_28: 100.00
-Siswa_29: 84.00
-Siswa_30: 60.00
-Siswa_31: 85.00
-Siswa_32: 63.00
-Siswa_33: 64.00
-Siswa_34: 68.00
-Siswa_35: 67.00
-Siswa_36: 52.00
-Siswa_37: 79.00
-Siswa_38: 55.00
-Siswa_39: 88.00
-Siswa_40: 95.00
-Siswa_41: 78.00
-Siswa_42: 66.00
-Siswa_43: 71.00
-Siswa_44: 64.00
-Siswa_45: 51.00
-Siswa_46: 77.00
-Siswa_47: 90.00
-Siswa_48: 83.00
-Siswa_49: 99.00
-Siswa_50: 56.00
-Siswa_51: 68.00
-Siswa_52: 88.00
-Siswa_53: 62.00
-Siswa_54: 98.00
-Siswa_55: 58.00
-Siswa_56: 92.00
-Siswa_57: 60.00
-Siswa_58: 55.00
-Siswa_59: 93.00
-Siswa_60: 60.00
-Siswa_61: 53.00
-Siswa_62: 79.00
-Siswa_63: 75.00
-Siswa_64: 83.00
-Siswa_65: 58.00
-Siswa_66: 50.00
-Siswa_67: 75.00
-Siswa_68: 61.00
-Siswa_69: 57.00
-Siswa_70: 98.00
-Siswa_71: 85.00
-Siswa_72: 57.00
-Siswa_73: 53.00
-Siswa_74: 55.00
-Siswa_75: 54.00
-Siswa_76: 64.00
-Siswa_77: 51.00
-Siswa_78: 65.00
-Siswa_79: 68.00
-Siswa_80: 51.00
-Siswa_81: 99.00
-Siswa_82: 89.00
-Siswa_83: 92.00
-Siswa_84: 56.00
-Siswa_85: 96.00
-Siswa_86: 79.00
-Siswa_87: 76.00
-Siswa_88: 71.00
-Siswa_89: 98.00
-Siswa_90: 89.00
-Siswa_91: 92.00
-Siswa_92: 65.00
-Siswa_93: 50.00
-Siswa_94: 84.00
-Siswa_95: 67.00
-Siswa_96: 59.00
-Siswa_97: 57.00
-Siswa_98: 70.00
-Siswa_99: 66.00
-Siswa_100: 78.00
+![Screenshot 2024-09-29 172220](https://github.com/user-attachments/assets/2afc596a-950b-4e77-9c53-1a4ed91e17d3)
+![Screenshot 2024-09-29 172246](https://github.com/user-attachments/assets/3baf1c7f-d270-4431-b429-3865123e8da6)
+![Screenshot 2024-09-29 172313](https://github.com/user-attachments/assets/618e20cf-d4ef-4fd5-a090-071b54009d2d)
 
-Mahasiswa dengan nilai tertinggi: Siswa_7 dengan rata-rata 100.00
-Mahasiswa dengan nilai terendah: Siswa_5 dengan rata-rata 50.00
-```
 Penjelasan :
 
 Output ini menunjukkan rata-rata nilai untuk setiap mahasiswa yang terdaftar dalam dataset. Untuk setiap siswa, terdapat rata-rata nilai yang dihitung dari nilai-nilai yang mereka peroleh. Dari daftar tersebut, tampak bahwa **Siswa_7** memiliki rata-rata nilai tertinggi yaitu **100.00**, yang menunjukkan bahwa siswa tersebut berhasil mendapatkan nilai sempurna. Sebaliknya, **Siswa_5** memiliki rata-rata nilai terendah yaitu **50.00**, menandakan bahwa siswa ini berada di bawah standar yang diharapkan dalam hal nilai. Analisis ini memberikan gambaran umum tentang kinerja akademis mahasiswa yang dapat digunakan untuk evaluasi lebih lanjut.
@@ -847,22 +529,8 @@ Penjelasan :
 Program "Tebak Angka" adalah permainan di mana pemain menebak angka rahasia antara 1 hingga 100. Program memilih angka secara acak dan memberikan pemain 5 percobaan untuk menebak. Setiap tebakan diperiksa; jika tebakan terlalu kecil atau besar, pemain mendapatkan umpan balik. Program juga menangani kesalahan input non-angka. Jika pemain menebak dengan benar, mereka menang, tetapi jika kehabisan percobaan, angka rahasia diungkapkan. Program ini mengilustrasikan pengendalian alur, penanganan kesalahan, dan interaksi pengguna dalam Python.
 
 ## Hasil output 
-```Python
-Selamat datang di permainan Tebak Angka!
-Saya telah memilih sebuah angka antara 1 hingga 100.
-Anda memiliki 5 percobaan untuk menebaknya.
-Tebakan ke-1:  2
-Tebakan Anda terlalu kecil.
-Tebakan ke-2:  70
-Tebakan Anda terlalu besar.
-Tebakan ke-3:  53
-Tebakan Anda terlalu besar.
-Tebakan ke-4:  12
-Tebakan Anda terlalu kecil.
-Tebakan ke-5:  43
-Tebakan Anda terlalu besar.
-Anda kehabisan percobaan. Angka yang benar adalah: 41.
-```
+![Screenshot 2024-09-29 172453](https://github.com/user-attachments/assets/545d5152-3ac2-4496-886f-8a084a2e99cb)
+
 Penjelasan :
 
 Pemain mencoba menebak angka rahasia antara 1 hingga 100 dengan total 5 percobaan. 
@@ -912,9 +580,8 @@ Program di atas terdiri dari dua fungsi:
 Pada contoh penggunaan dengan `n = 4`, outputnya adalah `[1, 2, 6, 24]`, yang merupakan faktorial dari 1, 2, 3, dan 4.
 
 ## Hasil output 
-```Python
-[1, 2, 6, 24]
-```
+![Screenshot 2024-09-29 172542](https://github.com/user-attachments/assets/12c7f291-d141-4ed3-a6ea-10b2601773a4)
+
 Penjelasan :
 
 Output `[1, 2, 6, 24]` menunjukkan urutan faktorial dari angka 1 hingga 4, dihasilkan oleh fungsi `urutan_faktorial`. Rincian dari output ini adalah:
@@ -931,56 +598,9 @@ Masing-masing elemen dalam daftar adalah hasil dari menghitung faktorial untuk s
 ### 7. [ Pemrograman dengan Algoritma Greedy]
 **Soal**: Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
 
-```Python
-def min_coin_change(amount, coins):
-    """Menghitung kombinasi minimum koin yang diperlukan untuk mencapai jumlah tertentu."""
-    # Mengurutkan koin dari yang terbesar ke yang terkecil
-    coins.sort(reverse=True)
-    
-    # Menyimpan jumlah koin yang digunakan
-    coin_count = {}
-    
-    for coin in coins:
-        if amount == 0:
-            break
-        
-        # Menghitung jumlah koin yang bisa digunakan
-        count = amount // coin
-        if count > 0:
-            coin_count[coin] = count
-            amount -= coin * count
-            
-    if amount > 0:
-        print("Tidak mungkin mencapai jumlah uang tersebut dengan koin yang tersedia.")
-    else:
-        print("Kombinasi koin yang diperlukan:")
-        for coin, count in coin_count.items():
-            print(f"Koin {coin}: {count} buah")
+![Screenshot 2024-09-29 172621](https://github.com/user-attachments/assets/f8fdf0a1-9718-4b75-88fa-249d69a2771e)
+![Screenshot 2024-09-29 172710](https://github.com/user-attachments/assets/a4f9bb5c-e741-42a8-ae8c-f19d8f30333a)
 
-def main():
-    # Meminta input jumlah uang dan daftar koin
-    try:
-        amount = int(input("Masukkan jumlah uang yang ingin dicapai: "))
-        coins_input = input("Masukkan nilai koin yang tersedia (pisahkan dengan spasi): ")
-        coins = list(map(int, coins_input.split()))
-
-        if amount < 0:
-            print("Jumlah uang tidak boleh negatif.")
-            return
-        
-        if not coins:
-            print("Daftar koin tidak boleh kosong.")
-            return
-
-        min_coin_change(amount, coins)
-    
-    except ValueError:
-        print("Input tidak valid. Pastikan Anda memasukkan angka untuk jumlah uang dan nilai koin.")
-
-# Menjalankan program
-if __name__ == "__main__":
-    main()
-```
 ```Python
 def min_coin_change(amount, coins):
     """Menghitung kombinasi minimum koin yang diperlukan untuk mencapai jumlah tertentu."""
@@ -1064,12 +684,8 @@ Fungsi `main()` bertanggung jawab untuk menjalankan program dan mengelola intera
 Dengan menggunakan struktur ini, program dapat memastikan bahwa pengguna memberikan input yang valid sebelum melakukan perhitungan, sehingga meningkatkan pengalaman pengguna dan mencegah kesalahan runtime.
 
 ## Hasil output 
-```Python
-Masukkan jumlah uang yang ingin dicapai:  1000000
-Masukkan nilai koin yang tersedia (pisahkan dengan spasi):  10 000
-Kombinasi koin yang diperlukan:
-Koin 10: 100000 buah
-```
+![Screenshot 2024-09-29 172738](https://github.com/user-attachments/assets/09309488-d473-4c80-91a0-49f72f0c3002)
+
 Penjelasan :
 
 Output dari program menunjukkan hasil dari fungsi `min_coin_change()` setelah pengguna memasukkan jumlah uang yang ingin dicapai dan nilai koin yang tersedia. Berikut adalah penjelasan singkat:
@@ -1090,29 +706,8 @@ Ini menunjukkan bahwa algoritme berhasil menghitung kombinasi minimum koin yang 
 ### 8. [Kombinasi String dan Manipulasi List]
 **Soal**: Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. Misalnya
 
-```Python
-def reverse_words(input_string):
-    """Mengonversi string menjadi list berisi kata-kata yang terbalik."""
-    # Memecah string menjadi kata-kata
-    words = input_string.split()
-    
-    # Membalik setiap kata dan menyimpannya dalam list
-    reversed_words = [word[::-1] for word in words]
-    
-    return reversed_words
+![Screenshot 2024-09-29 172801](https://github.com/user-attachments/assets/d0f369f5-ba35-4d40-b2b6-69e8fa6e8cb7)
 
-def main():
-    # Meminta input dari pengguna
-    user_input = input("Masukkan string: ")
-    
-    # Mengonversi dan menampilkan hasil
-    result = reverse_words(user_input)
-    print(result)
-
-# Menjalankan program
-if __name__ == "__main__":
-    main()
-```
 ```Python
 def reverse_words(input_string):
     """Mengonversi string menjadi list berisi kata-kata yang terbalik."""
@@ -1146,10 +741,8 @@ Penjelasan :
 Fungsi `main()` meminta input dari pengguna berupa string, kemudian menggunakan fungsi `reverse_words()` untuk membalik setiap kata dalam string tersebut. Setelah itu, hasilnya ditampilkan ke layar. Program ini berjalan dengan memeriksa apakah file dieksekusi sebagai program utama dan menjalankan fungsi `main()`. Misalnya, jika pengguna memasukkan string `"Halo Dunia"`, outputnya akan berupa `['olaH', 'ainuD']`.
 
 ## Hasil output 
-```Python
-Masukkan string:  aku suka buah
-['uka', 'akus', 'haub']
-```
+![Screenshot 2024-09-29 172838](https://github.com/user-attachments/assets/fc7ac63b-1ee2-4b17-b1c0-5b609fbfbc8e)
+
 Penjelasan :
 
 Output `['uka', 'akus', 'haub']` menunjukkan bahwa setiap kata dalam string yang dimasukkan, yaitu "aku suka buah", telah dibalik. 
@@ -1165,51 +758,9 @@ Dengan demikian, fungsi `reverse_words()` berhasil mengonversi dan membalik seti
 ### 9. Konsep Class dan Object-Oriented Programming]
 **Soal**: Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku.
 
-```Python
-class Buku:
-    def __init__(self, judul, penulis, tahun_terbit):
-        """Inisialisasi atribut judul, penulis, dan tahun terbit."""
-        self.judul = judul
-        self.penulis = penulis
-        self.tahun_terbit = tahun_terbit
+![Screenshot 2024-09-29 172937](https://github.com/user-attachments/assets/9454aa61-9892-4f87-bda5-e9f26a861317)
+![Screenshot 2024-09-29 173009](https://github.com/user-attachments/assets/8d366dc9-24f8-4ad0-b82d-a29a6975a18b)
 
-    def tampilkan_informasi(self):
-        """Menampilkan informasi buku."""
-        print(f"Judul: {self.judul}")
-        print(f"Penulis: {self.penulis}")
-        print(f"Tahun Terbit: {self.tahun_terbit}")
-
-    def hitung_usia_buku(self, tahun_sekarang):
-        """Menghitung usia buku berdasarkan tahun saat ini."""
-        return tahun_sekarang - self.tahun_terbit
-
-def main():
-    # Tahun saat ini
-    tahun_sekarang = int(input("Masukkan tahun saat ini: "))
-
-    # Memasukkan informasi buku melalui input
-    jumlah_buku = int(input("Berapa buku yang ingin Anda masukkan? "))
-
-    buku_list = []
-    
-    for i in range(jumlah_buku):
-        print(f"\nMasukkan informasi buku ke-{i + 1}:")
-        judul = input("Masukkan judul buku: ")
-        penulis = input("Masukkan penulis buku: ")
-        tahun_terbit = int(input("Masukkan tahun terbit buku: "))
-        buku = Buku(judul, penulis, tahun_terbit)
-        buku_list.append(buku)
-
-    # Menampilkan informasi dan usia setiap buku
-    for buku in buku_list:
-        buku.tampilkan_informasi()
-        usia = buku.hitung_usia_buku(tahun_sekarang)
-        print(f"Usia Buku: {usia} tahun\n")
-
-# Menjalankan program
-if __name__ == "__main__":
-    main()
-```
 ```Python
 class Buku:
     def __init__(self, judul, penulis, tahun_terbit):
@@ -1285,29 +836,8 @@ Fungsi `main` dalam kode ini berfungsi untuk mengelola interaksi pengguna dalam 
 Dengan cara ini, program memungkinkan pengguna untuk dengan mudah memasukkan dan melihat informasi tentang beberapa buku serta menghitung berapa tahun buku tersebut telah diterbitkan.
 
 ## Hasil output 
-```Python
-Masukkan tahun saat ini:  2024
-Berapa buku yang ingin Anda masukkan?  2
+![Screenshot 2024-09-29 173045](https://github.com/user-attachments/assets/cc84ca32-8893-43d7-ab15-ec9e7b305bc6)
 
-Masukkan informasi buku ke-1:
-Masukkan judul buku:  3726 mdpl
-Masukkan penulis buku:  monn
-Masukkan tahun terbit buku:  2012
-
-Masukkan informasi buku ke-2:
-Masukkan judul buku:  Art
-Masukkan penulis buku:  Aji
-Masukkan tahun terbit buku:  2011
-Judul: 3726 mdpl
-Penulis: monn
-Tahun Terbit: 2012
-Usia Buku: 12 tahun
-
-Judul: Art
-Penulis: Aji
-Tahun Terbit: 2011
-Usia Buku: 13 tahun
-```
 Penjelasan :
 
 Output di atas menunjukkan hasil dari program yang dijalankan, di mana pengguna berhasil memasukkan informasi untuk dua buku. Berikut adalah rincian proses dan hasilnya:
@@ -1337,53 +867,9 @@ Program ini memberikan ringkasan yang jelas tentang buku-buku yang dimasukkan, s
 
 ### 10. [Algoritma dengan Persyaratan Logika Khusus]
 **Soal**: Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
-```Python
-def binary_search_even(arr, target):
-    # Cek apakah target adalah angka ganjil
-    if target % 2 != 0:
-        print(f"Nilai {target} adalah angka ganjil, tidak dapat ditemukan dalam list genap.")
-        return -1 
+![Screenshot 2024-09-29 173111](https://github.com/user-attachments/assets/21b9d1fd-8383-456e-bae7-2f69716f8850)
+![Screenshot 2024-09-29 173146](https://github.com/user-attachments/assets/531733e5-3622-413f-bb68-655b87a14808)
 
-    low = 0
-    high = len(arr) - 1
-
-    while low <= high:
-        mid = (low + high) // 2
-        # Cek apakah nilai tengah adalah target
-        if arr[mid] == target:
-            return mid
-        # Jika target lebih kecil, abaikan setengah kanan
-        elif arr[mid] > target:
-            high = mid - 1
-        # Jika target lebih besar, abaikan setengah kiri
-        else:
-            low = mid + 1
-
-    # Jika nilai tidak ditemukan
-    return -1
-
-def main():
-    # Masukkan list genap (sorted) dari input pengguna
-    list_genap = list(map(int, input("Masukkan angka genap yang dipisahkan oleh spasi: ").split()))
-    
-    # Validasi untuk memastikan hanya angka genap
-    list_genap = [x for x in list_genap if x % 2 == 0]
-    
-    # Memasukkan target yang ingin dicari
-    target = int(input("Masukkan angka yang ingin dicari: "))
-
-    # Memanggil fungsi binary_search_even
-    result = binary_search_even(list_genap, target)
-
-    if result != -1:
-        print(f"Nilai {target} ditemukan di indeks {result}.")
-    else:
-        print(f"Nilai {target} tidak ditemukan di dalam list.")
-
-# Menjalankan program
-if __name__ == "__main__":
-    main()
-```
 ```Python
 def binary_search_even(arr, target):
     # Cek apakah target adalah angka ganjil
@@ -1441,11 +927,8 @@ Penjelasan :
 Fungsi `main` mengatur interaksi pengguna untuk melakukan pencarian biner angka genap dalam sebuah daftar. Pertama, pengguna diminta untuk memasukkan daftar angka genap yang dipisahkan oleh spasi, yang kemudian diubah menjadi list dari tipe integer. Fungsi ini memvalidasi input dengan memastikan hanya angka genap yang disimpan dalam `list_genap`. Selanjutnya, pengguna diminta untuk memasukkan angka yang ingin dicari. Fungsi `binary_search_even` kemudian dipanggil untuk mencari angka tersebut dalam daftar. Hasil pencarian ditampilkan, dengan informasi tentang apakah angka ditemukan beserta indeksnya jika ada. Program ini efektif untuk mencari angka dalam daftar yang telah diurutkan dan berisi hanya angka genap.
 
 ## Hasil output 
-```Python
-Masukkan angka genap yang dipisahkan oleh spasi:  2 4 6 8 10 
-Masukkan angka yang ingin dicari:  4
-Nilai 4 ditemukan di indeks 1.
-```
+![Screenshot 2024-09-29 173213](https://github.com/user-attachments/assets/dbd03ba7-e621-4ce2-aa6c-d52abbf4b452)
+
 Penjelasan :
 
 Dalam output tersebut, pengguna pertama kali memasukkan daftar angka genap `2 4 6 8 10`, yang diproses dan disimpan dalam list. Setelah itu, pengguna mencari angka `4`. Program kemudian menggunakan fungsi `binary_search_even` untuk mencari angka tersebut dalam list. Hasilnya menunjukkan bahwa angka `4` ditemukan di indeks `1`, yang berarti angka tersebut berada di posisi kedua dalam list (karena indeks dimulai dari 0). Ini mengindikasikan bahwa pencarian biner berfungsi dengan baik untuk menemukan angka dalam daftar yang telah diurutkan.
