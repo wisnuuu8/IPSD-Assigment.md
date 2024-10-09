@@ -14,6 +14,7 @@ Analisis data dapat dilakukan dengan menghitung nilai statistik menggunakan meto
 ## UNGUIDED
 
 **NOMOR 1**
+
 Load data (movie classification)
 ```Python
 import pandas as pd
@@ -35,5 +36,19 @@ Penjelasan :
 ![image](https://github.com/user-attachments/assets/63180720-13fa-4525-9685-3890989fbbbf)
 
 ![image](https://github.com/user-attachments/assets/04a7cfdc-d3db-49a7-94cd-abbaf729dffa)
+
+**NOMOR 2**
+
+Cek nilai duplikat
+```Python
+df.duplicated()
+```
+Penjelasan :
+
+Fungsi ini mengembalikan sebuah Series boolean yang menunjukkan apakah setiap baris dalam DataFrame adalah duplikat atau tidak.
+
+## HASIL OUTPUT 
+
+![image](https://github.com/user-attachments/assets/2daea239-23d3-46ea-a03e-9fcb3271bc95)
 
 
