@@ -37,6 +37,32 @@ Penjelasan :
 
 ![image](https://github.com/user-attachments/assets/04a7cfdc-d3db-49a7-94cd-abbaf729dffa)
 
+Penjelasan :
+
+Tabel: Output akan ditampilkan dalam format tabel dengan kolom-kolom yang sesuai dengan nama-nama kolom yang ada di dalam file CSV.
+
+Kolom: Setiap kolom dalam tabel mewakili fitur atau atribut dari data film. Misalnya, kolom-kolom tersebut mungkin termasuk:
+
+Marketing expense: Pengeluaran untuk pemasaran film.
+
+Production expense: Pengeluaran untuk produksi film.
+
+Multiplex coverage: Jumlah multiplex yang menayangkan film tersebut.
+
+Budget: Anggaran yang dialokasikan untuk film.
+
+Movie_length: Durasi film dalam menit.
+
+Lead Actor Rating: Rating dari aktor utama.
+
+Collection: Pendapatan yang diperoleh dari film.
+
+Start Tech Oscar: Apakah film tersebut dinominasikan untuk Oscar (1 untuk ya, 0 untuk tidak).
+
+Baris: Setiap baris dalam tabel mewakili satu entri atau record, yang berarti satu film. Data pada setiap baris memberikan informasi spesifik tentang film tersebut berdasarkan kolom yang ada.
+
+Indeks: Biasanya, setiap baris juga memiliki indeks yang menunjukkan urutan baris dalam DataFrame, mulai dari 0 hingga n-1, di mana n adalah jumlah total baris.
+
 **NOMOR 2**
 
 Cek nilai duplikat
@@ -49,6 +75,12 @@ Fungsi `df.duplicated()` pada objek DataFrame di Pandas digunakan untuk mengiden
 ## HASIL OUTPUT 
 
 ![image](https://github.com/user-attachments/assets/2daea239-23d3-46ea-a03e-9fcb3271bc95)
+
+Penjelasanc :
+
+Hasil dari df.duplicated() adalah sebuah Series boolean, di mana setiap elemen dalam Series ini menunjukkan apakah baris yang bersangkutan adalah duplikat dari baris sebelumnya atau tidak.
+
+Nilai True menunjukkan bahwa baris tersebut adalah duplikat, sedangkan False menunjukkan bahwa baris tersebut unik (bukan duplikat).
 
 **NOMOR 3**
 
@@ -71,6 +103,18 @@ Fungsi df.isnull().mean() * 100 digunakan untuk menghitung persentase nilai yang
 ## HASIL OUTPUT 
 ![image](https://github.com/user-attachments/assets/fbc71fa0-5832-4a9d-a618-902f4ca1cdc5)
 
+Penjelasan :
+
+Nama Kolom:
+
+Kolom-kolom yang ditampilkan, seperti Marketing expense, Production expense, Multiplex coverage, dan lainnya, menunjukkan atribut atau fitur dari dataset film.
+Nilai 0.000000:
+
+Angka tersebut menunjukkan bahwa tidak ada nilai yang hilang untuk masing-masing kolom. Artinya, semua data di kolom-kolom ini lengkap dan tidak ada entri yang hilang.
+dtype: float64:
+
+Ini menunjukkan bahwa tipe data dari nilai yang ditampilkan adalah float64, yang biasanya digunakan untuk angka desimal dalam pandas
+
 **NOMOR 4**
 
 Drop missing value berdasarkan baris, kolom, imputasi dengan mean, modus, median
@@ -92,6 +136,10 @@ Secara default, fungsi ini akan menghapus baris, tetapi bisa disesuaikan untuk k
 
 ![image](https://github.com/user-attachments/assets/c81048a5-eb54-4534-bd2f-4b34a9035c79)
 
+Penjelasan :
+
+Output ini memberikan gambaran umum tentang atribut film yang tercatat dalam dataset. Data tersebut dapat digunakan untuk analisis lebih lanjut, seperti analisis performa film, hubungan antara pengeluaran dan pendapatan, atau karakteristik genre film.
+
 ## Part 2
 ```Python
 df_dropped_columns = df.dropna(axis=1)
@@ -111,6 +159,14 @@ Fungsi `df.dropna(axis=1)` digunakan untuk menghapus kolom yang mengandung nilai
 
 ![image](https://github.com/user-attachments/assets/cdacc4b7-950d-4b44-8d64-f227b8e4e99e)
 
+Penjelasan :
+
+Output dari df_dropped_columns adalah DataFrame baru yang berisi semua kolom dari df, tetapi tanpa kolom yang memiliki nilai hilang (NaN).
+
+Contoh Output: Misalnya, jika DataFrame df awalnya memiliki 19 kolom dan ada 3 kolom yang memiliki nilai hilang, maka df_dropped_columns akan memiliki 16 kolom.
+
+Jika tidak ada kolom yang memiliki nilai hilang, maka output df_dropped_columns akan identik dengan df.
+
 ## Part 3
 ```Python
 import pandas as pd
@@ -127,6 +183,7 @@ print(df_mean_imputed)
 Penjelasan :
 
 `pd.to_numeric(df[column], errors='coerce')`: Kode ini mencoba mengonversi setiap kolom dalam DataFrame ke tipe numerik.
+
 Jika ada data yang tidak bisa dikonversi (misalnya, teks), opsi errors='coerce' akan menggantinya dengan NaN.
 Ini dilakukan untuk setiap kolom dalam DataFrame, sehingga semua data non-numerik akan diganti dengan NaN, memungkinkan perhitungan matematis seperti pengisian nilai rata-rata.
 
@@ -147,6 +204,10 @@ Ini dilakukan untuk setiap kolom dalam DataFrame, sehingga semua data non-numeri
 
 ![image](https://github.com/user-attachments/assets/44918724-2c0c-401e-88f9-3ba1d66931dc)
 
+Penjelasan :
+
+Output dari kode ini memberikan informasi yang berguna mengenai tipe data dalam DataFrame, dan juga menunjukkan bagaimana nilai yang hilang dapat diatasi dengan mengganti nilai NaN dengan nilai rata-rata kolom yang bersangkutan. Ini adalah langkah umum dalam pembersihan data dan persiapan sebelum melakukan analisis lebih lanjut.
+
 ## Part 4
 ```Python
 df_median_imputed = df.fillna(df.median())
@@ -163,6 +224,12 @@ Penjelasan :
 ![image](https://github.com/user-attachments/assets/11354b48-0526-4871-ac0b-e2dc16c12b48)
 
 ![image](https://github.com/user-attachments/assets/912468d7-c858-4e6d-83c2-ec160752cd4f)
+
+Penjelasan :
+
+Output dari df_median_imputed adalah DataFrame baru yang sama dengan df, tetapi semua nilai NaN di setiap kolom telah diganti dengan nilai median dari kolom tersebut.
+
+Misalnya, jika sebelumnya ada nilai NaN pada kolom Marketing expense, dan nilai median kolom tersebut adalah 205.462, maka semua NaN pada kolom itu akan diganti dengan 205.462
 
 ## Part 5
 ```Python
@@ -182,6 +249,10 @@ Penjelasan :
 ![image](https://github.com/user-attachments/assets/6493b012-1890-4dcd-9f66-e338e862a3b7)
 
 ![image](https://github.com/user-attachments/assets/01900c87-4468-4153-ab6b-ff80b0bc85f8)
+
+Penjelasan :
+
+DataFrame baru yang sama dengan df, tetapi semua nilai NaN di setiap kolom telah diganti dengan nilai modus dari kolom tersebut
 
 **NOMOR 5**
 
@@ -212,6 +283,10 @@ Penjelasan :
 
 ## HASIL OUTPUT
 ![image](https://github.com/user-attachments/assets/eef42d48-b975-48db-b015-b316d2395444)
+
+Penjelasan :
+
+Kode ini adalah langkah terakhir dalam proses analisis dan manipulasi data, di mana Anda menyimpan data yang telah diproses ke dalam format yang dapat digunakan untuk analisis lebih lanjut atau untuk berbagi dengan orang lain
 
 ## KESIMPULAN
 
