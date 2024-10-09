@@ -45,8 +45,7 @@ df.duplicated()
 ```
 Penjelasan :
 
-Fungsi ini mengembalikan sebuah Series boolean yang menunjukkan apakah setiap baris dalam DataFrame adalah duplikat atau tidak.
-
+Fungsi `df.duplicated()` pada objek DataFrame di Pandas digunakan untuk mengidentifikasi baris-baris yang duplikat dalam DataFrame df. Hasilnya adalah serangkaian nilai boolean yang menunjukkan apakah setiap baris adalah duplikat dari baris sebelumnya atau tidak. Fungsi ini sangat berguna ketika kamu ingin memeriksa atau menghapus duplikasi data dalam suatu dataset
 ## HASIL OUTPUT 
 
 ![image](https://github.com/user-attachments/assets/2daea239-23d3-46ea-a03e-9fcb3271bc95)
@@ -61,12 +60,22 @@ null_percentage
 ```
 Penjelasan :
 
+Fungsi df.isnull().mean() * 100 digunakan untuk menghitung persentase nilai yang hilang (missing values atau NaN) dalam setiap kolom dari DataFrame df.
+
+`df.isnull()`: Menghasilkan DataFrame boolean dengan True untuk nilai yang hilang (NaN) dan False untuk nilai yang ada.
+
+`.mean()`: Menghitung rata-rata dari setiap kolom, yang sebenarnya menghitung proporsi nilai True (nilai hilang) di kolom tersebut. Ini bekerja karena True bernilai 1 dan False bernilai 0 dalam konteks perhitungan.
+
+`* 100`: Mengonversi proporsi nilai yang hilang menjadi persentase.
+
 ## HASIL OUTPUT 
 ![image](https://github.com/user-attachments/assets/fbc71fa0-5832-4a9d-a618-902f4ca1cdc5)
 
 **NOMOR 4**
 
 Drop missing value berdasarkan baris, kolom, imputasi dengan mean, modus, median
+
+## Part 1
 ```Python
 df_dropped_rows = df.dropna()
 
@@ -74,11 +83,16 @@ df_dropped_rows
 ```
 Penjelasan :
 
+Fungsi df.dropna() digunakan untuk menghapus baris yang mengandung nilai NaN (hilang) dari DataFrame. Hasilnya adalah DataFrame baru, di mana semua baris yang memiliki setidaknya satu nilai NaN akan dihapus.
+
+`df.dropna()`: Menghapus baris yang mengandung nilai NaN (hilang).
+Secara default, fungsi ini akan menghapus baris, tetapi bisa disesuaikan untuk kolom atau baris tertentu.
 ## HASIL OUTPUT 
 ![image](https://github.com/user-attachments/assets/f153b307-6d86-484c-9064-aa0b6c8c5055)
 
 ![image](https://github.com/user-attachments/assets/c81048a5-eb54-4534-bd2f-4b34a9035c79)
 
+## Part 2
 ```Python
 df_dropped_columns = df.dropna(axis=1)
 
@@ -86,11 +100,18 @@ df_dropped_columns
 ```
 Penjelasan :
 
+Fungsi `df.dropna(axis=1)` digunakan untuk menghapus kolom yang mengandung nilai NaN (hilang) dalam DataFrame df. Secara default, dropna() bekerja pada baris, tetapi dengan menambahkan parameter axis=1, kamu bisa menghapus kolom-kolom yang memiliki nilai hilang.
+
+`axis=1`: Mengarahkan fungsi untuk bekerja pada kolom. Jika ada nilai NaN di dalam kolom mana pun, kolom tersebut akan dihapus.
+
+`dropna()`: Menghapus entitas (baris atau kolom) yang mengandung nilai hilang (NaN).
+
 ## HASIL OUTPUT 
 ![image](https://github.com/user-attachments/assets/460017b9-82a1-46fb-b730-477b2eee161d)
 
 ![image](https://github.com/user-attachments/assets/cdacc4b7-950d-4b44-8d64-f227b8e4e99e)
 
+## Part 3
 ```Python
 import pandas as pd
 
@@ -105,6 +126,15 @@ print(df_mean_imputed)
 ```
 Penjelasan :
 
+`pd.to_numeric(df[column], errors='coerce')`: Kode ini mencoba mengonversi setiap kolom dalam DataFrame ke tipe numerik.
+Jika ada data yang tidak bisa dikonversi (misalnya, teks), opsi errors='coerce' akan menggantinya dengan NaN.
+Ini dilakukan untuk setiap kolom dalam DataFrame, sehingga semua data non-numerik akan diganti dengan NaN, memungkinkan perhitungan matematis seperti pengisian nilai rata-rata.
+
+`df.mean()`: Menghitung rata-rata dari setiap kolom.
+
+`df.fillna(df.mean())`: Mengisi nilai yang hilang (NaN) di setiap kolom dengan rata-rata kolom yang bersangkutan. Ini merupakan metode imputasi rata-rata yang sering digunakan dalam menangani missing data.
+
+## HASIL OUTPUT
 ![image](https://github.com/user-attachments/assets/d5a06351-5df5-41ad-ad70-4bf1549086b9)
 
 ![image](https://github.com/user-attachments/assets/5e7b3c81-d6dd-4899-b645-8c0d0df3c85c)
@@ -117,6 +147,7 @@ Penjelasan :
 
 ![image](https://github.com/user-attachments/assets/44918724-2c0c-401e-88f9-3ba1d66931dc)
 
+## Part 4
 ```Python
 df_median_imputed = df.fillna(df.median())
 
@@ -124,18 +155,28 @@ df_median_imputed
 ```
 Penjelasan :
 
+`df.median()`: Menghitung median dari setiap kolom dalam DataFrame df. Median adalah nilai tengah dari data yang diurutkan. Jika jumlah data genap, median adalah rata-rata dari dua nilai tengah.
+
+`df.fillna(df.median())`: Mengganti semua nilai yang hilang (NaN) di DataFrame df dengan nilai median dari kolom yang bersangkutan.
 
 ## HASIL OUTPUT 
 ![image](https://github.com/user-attachments/assets/11354b48-0526-4871-ac0b-e2dc16c12b48)
 
 ![image](https://github.com/user-attachments/assets/912468d7-c858-4e6d-83c2-ec160752cd4f)
 
+## Part 5
 ```Python
 df_mode_imputed = df.fillna(df.mode().iloc[0])
 
 df_mode_imputed
 ```
+Penjelasan :
 
+`df.mode()`: Menghitung modus dari setiap kolom dalam DataFrame df. Modus adalah nilai yang paling sering muncul dalam sebuah kolom.
+
+`.iloc[0]`: Modus mengembalikan DataFrame yang bisa memiliki lebih dari satu modus (jika ada lebih dari satu nilai yang paling sering muncul). Dengan iloc[0], kamu memilih modus pertama (jika ada beberapa modus).
+
+`df.fillna(df.mode().iloc[0])`: Mengganti semua nilai yang hilang (NaN) di DataFrame df dengan modus dari kolom yang bersangkutan.
 
 ## HASIL OUTPUT 
 ![image](https://github.com/user-attachments/assets/6493b012-1890-4dcd-9f66-e338e862a3b7)
@@ -157,9 +198,25 @@ print(f"Data telah disimpan ke {output_excel_path}")
 ```
 Penjelasan :
 
+`output_csv_path = 'Movie_classification.csv'`: Mendefinisikan path untuk menyimpan file CSV.
+
+`df.to_csv(output_csv_path, index=False)`: Menyimpan DataFrame df ke file CSV tanpa menyertakan index (karena index=False).
+
+`print(f"Data telah disimpan ke {output_csv_path}")`: Mencetak pesan yang mengonfirmasi bahwa file CSV telah disimpan.
+
+`output_excel_path = 'Movie_classification.xlsx'`: Mendefinisikan path untuk menyimpan file Excel.
+
+`df.to_excel(output_excel_path, index=False)`: Menyimpan DataFrame df ke file Excel tanpa menyertakan index (karena index=False).
+
+`print(f"Data telah disimpan ke {output_excel_path}")`: Mencetak pesan yang mengonfirmasi bahwa file Excel telah disimpan.
 
 ## HASIL OUTPUT
 ![image](https://github.com/user-attachments/assets/eef42d48-b975-48db-b015-b316d2395444)
 
+## KESIMPULAN
+
+Kesimpulan dari laporan praktikum ini menunjukkan bahwa pengolahan data menggunakan Python, khususnya dengan pustaka Pandas, merupakan proses yang efisien dan efektif dalam mengubah data mentah menjadi informasi yang terstruktur dan bermanfaat. Dalam praktik ini, langkah-langkah seperti memuat data, mengidentifikasi nilai duplikat, menangani nilai hilang melalui berbagai metode imputasi (rata-rata, median, dan modus), serta menyimpan hasil pengolahan ke dalam format CSV dan Excel, telah dilakukan dengan baik. Proses ini tidak hanya membantu meningkatkan kualitas data tetapi juga mempersiapkan data untuk analisis lebih lanjut, yang merupakan kunci dalam pengambilan keputusan berbasis data.
+
+## REFERENSI 
 
 
