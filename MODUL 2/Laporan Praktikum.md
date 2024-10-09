@@ -51,4 +51,115 @@ Fungsi ini mengembalikan sebuah Series boolean yang menunjukkan apakah setiap ba
 
 ![image](https://github.com/user-attachments/assets/2daea239-23d3-46ea-a03e-9fcb3271bc95)
 
+**NOMOR 3**
+
+Menemukan null values buat presentase
+```Python
+null_percentage = df.isnull().mean() * 100
+
+null_percentage
+```
+Penjelasan :
+
+## HASIL OUTPUT 
+![image](https://github.com/user-attachments/assets/fbc71fa0-5832-4a9d-a618-902f4ca1cdc5)
+
+**NOMOR 4**
+
+Drop missing value berdasarkan baris, kolom, imputasi dengan mean, modus, median
+```Python
+df_dropped_rows = df.dropna()
+
+df_dropped_rows
+```
+Penjelasan :
+
+## HASIL OUTPUT 
+![image](https://github.com/user-attachments/assets/f153b307-6d86-484c-9064-aa0b6c8c5055)
+
+![image](https://github.com/user-attachments/assets/c81048a5-eb54-4534-bd2f-4b34a9035c79)
+
+```Python
+df_dropped_columns = df.dropna(axis=1)
+
+df_dropped_columns
+```
+Penjelasan :
+
+## HASIL OUTPUT 
+![image](https://github.com/user-attachments/assets/460017b9-82a1-46fb-b730-477b2eee161d)
+
+![image](https://github.com/user-attachments/assets/cdacc4b7-950d-4b44-8d64-f227b8e4e99e)
+
+```Python
+import pandas as pd
+
+print(df.dtypes)
+
+for column in df.columns:
+    df[column] = pd.to_numeric(df[column], errors='coerce')
+
+df_mean_imputed = df.fillna(df.mean())
+
+print(df_mean_imputed)
+```
+Penjelasan :
+
+![image](https://github.com/user-attachments/assets/d5a06351-5df5-41ad-ad70-4bf1549086b9)
+
+![image](https://github.com/user-attachments/assets/5e7b3c81-d6dd-4899-b645-8c0d0df3c85c)
+
+![image](https://github.com/user-attachments/assets/497a66d9-8241-462b-a68d-64c193a787fa)
+
+![image](https://github.com/user-attachments/assets/1d46352c-c1dd-41b1-9ae6-74074e9587f3)
+
+![image](https://github.com/user-attachments/assets/05c44979-4fa5-4da1-918f-e4c0aeb8c0f6)
+
+![image](https://github.com/user-attachments/assets/44918724-2c0c-401e-88f9-3ba1d66931dc)
+
+```Python
+df_median_imputed = df.fillna(df.median())
+
+df_median_imputed
+```
+Penjelasan :
+
+
+## HASIL OUTPUT 
+![image](https://github.com/user-attachments/assets/11354b48-0526-4871-ac0b-e2dc16c12b48)
+
+![image](https://github.com/user-attachments/assets/912468d7-c858-4e6d-83c2-ec160752cd4f)
+
+```Python
+df_mode_imputed = df.fillna(df.mode().iloc[0])
+
+df_mode_imputed
+```
+
+
+## HASIL OUTPUT 
+![image](https://github.com/user-attachments/assets/6493b012-1890-4dcd-9f66-e338e862a3b7)
+
+![image](https://github.com/user-attachments/assets/01900c87-4468-4153-ab6b-ff80b0bc85f8)
+
+**NOMOR 5**
+
+Export data ke csv dan excel
+
+```Python
+output_csv_path = 'Movie_classification.csv'
+df.to_csv(output_csv_path, index=False)
+print(f"Data telah disimpan ke {output_csv_path}")
+
+output_excel_path = 'Movie_classification.xlsx'
+df.to_excel(output_excel_path, index=False)
+print(f"Data telah disimpan ke {output_excel_path}")
+```
+Penjelasan :
+
+
+## HASIL OUTPUT
+![image](https://github.com/user-attachments/assets/eef42d48-b975-48db-b015-b316d2395444)
+
+
 
