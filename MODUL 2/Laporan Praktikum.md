@@ -5,11 +5,11 @@
 
 **PENGOLAHAN DATA DENGAN PYTHON**
 
-Pengolahan data adalah proses penting dalam mengubah data mentah menjadi informasi yang lebih berguna dan terstruktur. Python, sebagai salah satu bahasa pemrograman yang paling populer untuk analisis data, menawarkan sintaksis yang sederhana dan berbagai pustaka yang mendukung, seperti Pandas, NumPy, Matplotlib, dan Seaborn. Pandas menjadi pustaka utama untuk manipulasi dan analisis data, dengan struktur data seperti `DataFrame` dan `Series` yang memungkinkan pengguna untuk bekerja dengan data dalam format yang mirip dengan tabel. 
+Pengolahan data adalah proses penting dalam mengubah data mentah menjadi informasi yang lebih berguna dan terstruktur[1]. Python, sebagai salah satu bahasa pemrograman yang paling populer untuk analisis data, menawarkan sintaksis yang sederhana dan berbagai pustaka yang mendukung, seperti Pandas, NumPy, Matplotlib, dan Seaborn. Pandas menjadi pustaka utama untuk manipulasi dan analisis data, dengan struktur data seperti `DataFrame` dan `Series` yang memungkinkan pengguna untuk bekerja dengan data dalam format yang mirip dengan tabel. 
 
-Dalam pengolahan data, pengguna dapat membaca data dari berbagai format file menggunakan fungsi seperti `pd.read_csv()` dan `pd.read_excel()`, serta menyimpannya kembali ke dalam file menggunakan metode seperti `to_csv()` dan `to_excel()`. Selain itu, manipulasi data yang meliputi filtering, grouping, dan aggregation dapat dilakukan dengan mudah. Pembersihan data juga merupakan langkah penting, di mana pengguna dapat menangani data yang hilang atau duplikat menggunakan fungsi seperti `dropna()` dan `fillna()`. 
+Dalam pengolahan data, pengguna dapat membaca data dari berbagai format file menggunakan fungsi seperti `pd.read_csv()` dan `pd.read_excel()`, serta menyimpannya kembali ke dalam file menggunakan metode seperti `to_csv()` dan `to_excel()`. Selain itu, manipulasi data yang meliputi filtering, grouping, dan aggregation dapat dilakukan dengan mudah. Pembersihan data juga merupakan langkah penting, di mana pengguna dapat menangani data yang hilang atau duplikat menggunakan fungsi seperti `dropna()` dan `fillna()`[2]. 
 
-Analisis data dapat dilakukan dengan menghitung nilai statistik menggunakan metode `describe()` untuk mendapatkan ringkasan statistik. Visualisasi data juga berperan penting dalam analisis, dengan penggunaan grafik seperti histogram, box plot, dan scatter plot untuk menyajikan hasil analisis secara visual. Contoh penerapan pengolahan data dengan Python dapat terlihat pada analisis data penjualan, data keuangan, atau data hasil survei. Kesimpulannya, Python, bersama dengan pustaka-pustaka yang ada, menyediakan alat yang kuat dan fleksibel untuk pengolahan dan analisis data, didukung oleh komunitas yang besar serta banyak sumber daya pembelajaran yang memudahkan pengguna untuk mendalami topik ini.
+Analisis data dapat dilakukan dengan menghitung nilai statistik menggunakan metode `describe()` untuk mendapatkan ringkasan statistik[3]. Visualisasi data juga berperan penting dalam analisis, dengan penggunaan grafik seperti histogram, box plot, dan scatter plot untuk menyajikan hasil analisis secara visual. Contoh penerapan pengolahan data dengan Python dapat terlihat pada analisis data penjualan, data keuangan, atau data hasil survei. Kesimpulannya, Python, bersama dengan pustaka-pustaka yang ada, menyediakan alat yang kuat dan fleksibel untuk pengolahan dan analisis data, didukung oleh komunitas yang besar serta banyak sumber daya pembelajaran yang memudahkan pengguna untuk mendalami topik ini.
 
 ## UNGUIDED
 
@@ -294,4 +294,9 @@ Kesimpulan dari laporan praktikum ini menunjukkan bahwa pengolahan data mengguna
 
 ## REFERENSI 
 
+(1). Nawassyarif, M. K. (2020). SISTEM INFORMASI PENGOLAHAN DATA TERNAK UNIT PELAKSANA . 32-39.
+
+(2). ER1, R. F. (2023). Sistem Informasi Pengelolaan Data Nilai Siswa. 700-710.
+
+(3). Soband, A. (2002). PENGOLAHAN DATA DALAM SISTEM INFORMASI. 89-95.
 
