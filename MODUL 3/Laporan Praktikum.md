@@ -3,11 +3,11 @@
 
 ## Dasar Teori
  
-**Exploratory Data Analysis (EDA)** adalah metode statistik yang digunakan untuk menganalisis data dengan tujuan memahami struktur, pola, dan karakteristik utamanya sebelum melanjutkan ke pemodelan yang lebih kompleks. Tujuan utama EDA adalah mengeksplorasi data untuk mendeteksi pola, mengidentifikasi anomali, menguji asumsi, dan memvalidasi hipotesis yang relevan. Dalam EDA, salah satu langkah awal adalah memahami struktur data, termasuk tipe-tipe variabel, seperti numerik atau kategorikal, dan bagaimana distribusi data tersebut, apakah mengikuti distribusi normal atau tidak.
+**Exploratory Data Analysis (EDA)** adalah metode statistik yang digunakan untuk menganalisis data dengan tujuan memahami struktur, pola, dan karakteristik utamanya sebelum melanjutkan ke pemodelan yang lebih kompleks[1]. Tujuan utama EDA adalah mengeksplorasi data untuk mendeteksi pola, mengidentifikasi anomali, menguji asumsi, dan memvalidasi hipotesis yang relevan. Dalam EDA, salah satu langkah awal adalah memahami struktur data, termasuk tipe-tipe variabel, seperti numerik atau kategorikal, dan bagaimana distribusi data tersebut, apakah mengikuti distribusi normal atau tidak.
 
-Statistik deskriptif sering digunakan dalam EDA untuk merangkum informasi dasar dari data, misalnya ukuran pemusatan seperti mean, median, dan mode, serta ukuran dispersi seperti standar deviasi dan variansi. Selain itu, visualisasi data memegang peranan penting dalam EDA karena membantu mempermudah pemahaman data. Grafik seperti histogram, boxplot, dan scatterplot digunakan untuk menggambarkan distribusi, mendeteksi outlier, dan mengidentifikasi hubungan antara variabel. Outlier, atau nilai yang menyimpang secara signifikan dari data lain, sering terdeteksi melalui visualisasi ini dan menjadi bahan analisis lebih lanjut apakah harus dipertahankan, dihapus, atau disesuaikan.
+Statistik deskriptif sering digunakan dalam EDA untuk merangkum informasi dasar dari data, misalnya ukuran pemusatan seperti mean, median, dan mode, serta ukuran dispersi seperti standar deviasi dan variansi. Selain itu, visualisasi data memegang peranan penting dalam EDA karena membantu mempermudah pemahaman data. Grafik seperti histogram, boxplot, dan scatterplot digunakan untuk menggambarkan distribusi, mendeteksi outlier, dan mengidentifikasi hubungan antara variabel[2]. Outlier, atau nilai yang menyimpang secara signifikan dari data lain, sering terdeteksi melalui visualisasi ini dan menjadi bahan analisis lebih lanjut apakah harus dipertahankan, dihapus, atau disesuaikan.
 
-Selain itu, EDA juga memfokuskan diri pada analisis korelasi untuk menemukan hubungan antara variabel, seperti menggunakan korelasi Pearson untuk data numerik yang berdistribusi normal dan korelasi Spearman untuk data ordinal. EDA juga mencakup penanganan data yang hilang (missing data) yang dapat diatasi dengan cara menghapus data yang tidak lengkap atau mengisi nilai yang hilang dengan metode tertentu. Pada akhirnya, tujuan utama EDA adalah memberikan pemahaman awal yang mendalam tentang data sehingga dapat digunakan untuk membangun model, menguji hipotesis, atau menjawab pertanyaan penelitian dengan lebih tepat dan akurat.
+Selain itu, EDA juga memfokuskan diri pada analisis korelasi untuk menemukan hubungan antara variabel, seperti menggunakan korelasi Pearson untuk data numerik yang berdistribusi normal dan korelasi Spearman untuk data ordinal[3]. EDA juga mencakup penanganan data yang hilang (missing data) yang dapat diatasi dengan cara menghapus data yang tidak lengkap atau mengisi nilai yang hilang dengan metode tertentu. Pada akhirnya, tujuan utama EDA adalah memberikan pemahaman awal yang mendalam tentang data sehingga dapat digunakan untuk membangun model, menguji hipotesis, atau menjawab pertanyaan penelitian dengan lebih tepat dan akurat.
 
 ## GUIDED
 
@@ -462,7 +462,9 @@ Output dari kode ini terdiri dari tiga histogram yang menggambarkan distribusi k
 
 ## REFERENSI
 
-
+(1). Muhammad Radhi, A. D. (2021). ANALISIS BIG DATA DENGAN METODE EXPLORATORY DATA , 23-27.
+(2). Wahyuni1, E. D. (2016). Exploratory Data Analysis dalam Konteks Klasifikasi DataMining, 263~269.
+(3). Rizki1*, I. N. (2020). IMPLEMENTASI EXPLORATORY DATA ANALYSIS, 560-567.
 
 
 
