@@ -455,10 +455,12 @@ Penjelasan :
 Output dari kode ini terdiri dari tiga histogram yang menggambarkan distribusi kolom `Pregnancies` dalam dataset diabetes. Histogram pertama menunjukkan distribusi nilai `Pregnancies` sebelum normalisasi, di mana pola distribusi data asli terlihat, dengan kemungkinan adanya outlier atau distribusi yang tidak seimbang. Histogram kedua menampilkan distribusi nilai `Pregnancies` setelah diterapkan **RobustScaler**, yang mengurangi dampak outlier sehingga distribusi menjadi lebih terpusat di sekitar median dengan rentang nilai yang lebih kompak. Sementara itu, histogram ketiga menunjukkan distribusi nilai `Pregnancies` setelah penerapan **MinMaxScaler**, di mana semua nilai berada dalam rentang 0 hingga 1, memberikan skala yang konsisten, meskipun masih mungkin terpengaruh oleh outlier jika ada. Secara keseluruhan, output ini menggambarkan bagaimana kedua teknik normalisasi mempengaruhi distribusi data, yang memungkinkan analisis yang lebih baik pada model pembelajaran mesin yang akan digunakan selanjutnya.
 
 
+## Kesimpulan
+
+**Exploratory Data Analysis (EDA)** adalah langkah penting dalam analisis data yang bertujuan untuk memahami struktur, pola, dan karakteristik data sebelum pemodelan lebih lanjut. Melalui statistik deskriptif dan visualisasi, EDA membantu mendeteksi pola, anomali, dan outlier, serta menganalisis hubungan antar variabel. EDA juga menangani data yang hilang, sehingga memberikan pemahaman yang mendalam tentang data, yang esensial untuk pengambilan keputusan dan pengembangan model yang akurat.
 
 
-
-
+## REFERENSI
 
 
 
