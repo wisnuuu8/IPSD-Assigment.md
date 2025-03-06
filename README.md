@@ -1,4 +1,4 @@
-## Repository praktikum IPSD
+## Repository praktikum PBO
 
 <pre>
   Nama = WISNU AJI SANJAYA
